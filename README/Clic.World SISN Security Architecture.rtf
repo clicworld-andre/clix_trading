@@ -1,0 +1,1140 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\froman\fcharset0 TimesNewRomanPSMT;\f4\fnil\fcharset0 Menlo-Regular;\f5\fnil\fcharset0 HelveticaNeue-Italic;
+\f6\fnil\fcharset0 HelveticaNeue-Bold;}
+{\colortbl;\red255\green255\blue255;\red49\green49\blue49;\red255\green255\blue255;\red0\green0\blue0;
+\red242\green242\blue242;\red231\green231\blue231;\red109\green109\blue109;\red223\green223\blue223;}
+{\*\expandedcolortbl;;\cssrgb\c25098\c25098\c25098;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;
+\cssrgb\c96078\c96078\c96078;\cssrgb\c92549\c92549\c92549;\cssrgb\c50196\c50196\c50196;\cssrgb\c89804\c89804\c89804;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\paperw11905\paperh16837\margl1133\margr1133\margb1133\margt1133
+\deftab720
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b\fs36 \cf2 \cb3 \up0 \nosupersub \ulnone Clic.World Stellar Interbank Settlement Network (SISN) Security Architecture Overview
+\f1\b0 \cf2 \
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f2\fs24 \cf2 \
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b \cf2 Document Version:
+\f2\b0 \cf2  1.0\uc0\u8232 
+\f0\b \cf2 Audience:
+\f2\b0 \cf2  Chief Information Security Officers (CISOs), Information Security Teams, Central Bank Oversight Division\uc0\u8232 
+\f0\b \cf2 Classification:
+\f2\b0 \cf2  Highly Confidential\
+
+\f0\b \cf2 1. Executive Summary
+\f1\b0 \cf2 \
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f2 \cf2 The Clic.World Stellar Interbank Settlement Network (SISN) is designed from the ground up to meet and exceed the security standards required for critical financial market infrastructure. This document outlines a multi-layered, defense-in-depth security architecture that protects against modern threats through cryptographic guarantees, robust access control, comprehensive monitoring, and operational best practices. Our approach leverages proven technologies like the Stellar blockchain, mutual TLS (mTLS), and a zero-trust service mesh, ensuring confidentiality, integrity, and availability for all settlement transactions.\
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b \cf2 2. Security Principles
+\f1\b0 \cf2 \
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f2 \cf2 The architecture is built upon the following core principles:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f3 \cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone Zero-Trust:
+\f2\b0 \cf2  No entity, internal or external, is trusted by default. Verification is required from everyone trying to access resources.\
+\ls1\ilvl0
+\f3 \cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone Defense-in-Depth:
+\f2\b0 \cf2  Multiple, overlapping security controls are employed to protect assets. A breach of one layer does not compromise the entire system.\
+\ls1\ilvl0
+\f3 \cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone Principle of Least Privilege:
+\f2\b0 \cf2  Every component and user is granted the minimum levels of access necessary to perform its function.\
+\ls1\ilvl0
+\f3 \cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone Non-Repudiation:
+\f2\b0 \cf2  All critical actions, especially settlement instructions, are cryptographically signed to provide undeniable proof of their origin.\
+\ls1\ilvl0
+\f3 \cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone Auditability & Transparency:
+\f2\b0 \cf2  All actions are logged to an immutable ledger and audit trail, providing regulators with full transparency.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b \cf2 3. Detailed Security Architecture
+\f1\b0 \cf2 \
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f2 \cf2 The security model can be visualised in four concentric layers of defence.\
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b \cf2 Layer 1: Network & Transport Security
+\f1\b0 \cf2 \
+
+\f0\b \cf2 Objective:
+\f2\b0 \cf2  Secure all data in transit and authenticate all network participants.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1840\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3380\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3360\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \cb1 Control
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Implementation
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Purpose & Benefit
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth1840\clftsWidth3 \clheight2240 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3380\clftsWidth3 \clheight2240 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3360\clftsWidth3 \clheight2240 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone External mTLS
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone All bank-to-SISN API communication 
+\f0\b \cf2 must
+\f2\b0 \cf2  use Mutual TLS. Each bank is issued a unique client certificate. The SISN API Gateway validates these certificates before allowing any API call.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Prevents impersonation and MITM attacks.
+\f2\b0 \cf2  Ensures that only authorized bank systems can connect to the SISN API. This is the first and strongest gate.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1840\clftsWidth3 \clheight2780 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3380\clftsWidth3 \clheight2780 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3360\clftsWidth3 \clheight2780 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Internal mTLS (Automated)
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A 
+\f0\b \cf2 service mesh (Istio)
+\f2\b0 \cf2  is deployed within the Kubernetes cluster. It automatically injects sidecar proxies and manages certificates, enforcing mTLS for all traffic between microservices (e.g., between the OTST Service and the Stellar Connector).
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Prevents lateral movement.
+\f2\b0 \cf2  Even if an attacker breaches one service, they cannot eavesdrop on or intercept communication between other services. This creates a "zero-trust" internal network.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth1840\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3380\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3360\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone DDoS Protection
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Cloud-based DDoS protection (e.g., AWS Shield/Azure DDoS Protection) is deployed in front of the public API endpoints. Rate limiting is enforced at the API Gateway.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Ensures availability
+\f2\b0 \cf2  by mitigating volumetric and application-layer attacks designed to disrupt service.
+\f1 \cf0 \up0 \nosupersub \ulnone 
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone \cell \lastrow\row
+\pard\pardeftab720\sa274\partightenfactor0
+\cf2 Layer 2: Application & Data Security
+\f1\b0 \cf2 \
+
+\f0\b \cf2 Objective:
+\f2\b0 \cf2  Protect the application logic and the integrity of settlement instructions.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2320\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3120\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3140\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \cb1 Control
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Implementation
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Purpose & Benefit
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth2320\clftsWidth3 \clheight2240 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3120\clftsWidth3 \clheight2240 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3140\clftsWidth3 \clheight2240 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone One-Time Settlement Token (OTST)
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \cb3 \up0 \nosupersub \ulnone The OTST is a 
+\f0\b \cf2 JWT (JSON Web Token)
+\f2\b0 \cf2  signed with ECDSA (ES256). It contains critical claims: issuer bank, recipient bank, amount, a unique nonce (
+\f4 \cf2 \cb6 jti
+\f2 \cf2 \cb3 ), and a short expiry (e.g., 5 minutes).
+\f1 \cf0 \cb1 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Provides message-level integrity, authorization, and non-repudiation.
+\f2\b0 \cf2  The signature proves the instruction came from the issuing bank. The nonce and expiry prevent replay attacks.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2320\clftsWidth3 \clheight1940 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3120\clftsWidth3 \clheight1940 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3140\clftsWidth3 \clheight1940 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Public Key Directory (PKD)
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A highly available service that acts as the root of trust for OTST signatures. Banks and SISN services query the PKD to retrieve the public key needed to verify an OTST signature.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Ensures parties can reliably verify each other's identities.
+\f2\b0 \cf2  The PKD is the single source of truth for valid public keys.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth2320\clftsWidth3 \clheight3360 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3120\clftsWidth3 \clheight3360 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3140\clftsWidth3 \clheight3360 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Key Management
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone 1. Stellar Keys:
+\f2\b0 \cf2  Managed in CloudHSM or dedicated HSMs. Used solely for signing Stellar transactions.\
+
+\f0\b \cf2 2. OTST Signing Keys:
+\f2\b0 \cf2  Dedicated keys per bank, managed in HSMs, used solely for signing OTSTs.\
+
+\f0\b \cf2 3. Service Mesh CAs:
+\f2\b0 \cf2  Automatically managed by the service mesh control plane.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Separation of concerns and protection of secrets.
+\f2\b0 \cf2  Using HSMs ensures private keys are never exposed in memory or on disk. A breach of one key does not compromise others.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2320\clftsWidth3 \clheight2240 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3120\clftsWidth3 \clheight2240 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3140\clftsWidth3 \clheight2240 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Immutable Audit Trail
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone All OTST creation, submission, and settlement events are recorded to both the 
+\f0\b \cf2 Stellar blockchain
+\f2\b0 \cf2  (public, immutable proof) and an internal 
+\f0\b \cf2 immutable audit log
+\f2\b0 \cf2  (for richer detail and querying).
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Provides perfect non-repudiation and forensic capabilities.
+\f2\b0 \cf2  No participant can deny their actions, and regulators can reconstruct any event in history.
+\f1 \cf0 \up0 \nosupersub \ulnone 
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone \cell \lastrow\row
+\pard\pardeftab720\sa274\partightenfactor0
+\cf2 Layer 3: Access Control & Authorisation
+\f1\b0 \cf2 \
+
+\f0\b \cf2 Objective:
+\f2\b0 \cf2  Ensure that authenticated entities can only perform permitted actions.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1640\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3440\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3500\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \cb1 Control
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Implementation
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Purpose & Benefit
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth1640\clftsWidth3 \clheight2520 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3440\clftsWidth3 \clheight2520 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3500\clftsWidth3 \clheight2520 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone API Authorisation
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone The API Gateway validates an incoming request's client certificate (Who are you?) and then passes the request to internal services, which enforce 
+\f0\b \cf2 fine-grained authorization
+\f2\b0 \cf2  based on the identity and the OTST claims (Are you allowed to do this?).
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Prevents privilege escalation.
+\f2\b0 \cf2  A validated bank can only create OTSTs for its own account and for amounts it can cover.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1640\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3440\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3500\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Central Bank Multi-Sig
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone For critical functions (e.g., minting new tokens in the retail system), the Stellar transaction requires signatures from both the commercial bank 
+\f5\i \cf2 and
+\f2\i0 \cf2  the Central Bank's HSM.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Provides regulatory oversight and control.
+\f2\b0 \cf2  The Central Bank has a direct veto over the money supply within the tokenized system.
+\f1 \cf0 \up0 \nosupersub \ulnone 
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone \cell \lastrow\row
+\pard\pardeftab720\sa274\partightenfactor0
+\cf2 Layer 4: Operational & Governance Security
+\f1\b0 \cf2 \
+
+\f0\b \cf2 Objective:
+\f2\b0 \cf2  Maintain security through processes, monitoring, and resilience.\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1840\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3360\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3380\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \cb1 Control
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Implementation
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Purpose & Benefit
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth1840\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3360\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3380\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Security Monitoring (SIEM)
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone All logs (API Gateway, service mesh, application, HSM, audit trail) are aggregated into a Security Information and Event Management (SIEM) system like Splunk or the ELK Stack.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Enables real-time threat detection
+\f2\b0 \cf2  and correlation of events across the entire stack for rapid incident response.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1840\clftsWidth3 \clheight1380 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3360\clftsWidth3 \clheight1380 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3380\clftsWidth3 \clheight1380 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Vulnerability Management
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Automated scanning of container images and dependencies on every build. Regular penetration testing by accredited third-party firms.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Proactively identifies and remediates vulnerabilities
+\f2\b0 \cf2  before they can be exploited in production.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth1840\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3360\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3380\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Disaster Recovery & BCDR
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone The entire platform is deployed in a active-active or active-passive configuration across multiple availability zones. Regular, automated failover tests are conducted.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Ensures high availability and business continuity
+\f2\b0 \cf2  in the event of a catastrophic failure in one data center.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1840\clftsWidth3 \clheight1400 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3360\clftsWidth3 \clheight1400 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3380\clftsWidth3 \clheight1400 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Regulatory Observer Node
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone The Central Bank is provided with the capability to run a 
+\f0\b \cf2 read-only Stellar Validator node
+\f2\b0 \cf2 .
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Provides real-time, transparent oversight
+\f2\b0 \cf2  of all settlement activity on the ledger, enabling systemic risk monitoring.
+\f1 \cf0 \up0 \nosupersub \ulnone 
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone \cell \lastrow\row
+\pard\pardeftab720\sa274\partightenfactor0
+\cf2 \
+\
+\
+\
+4. Threat Analysis & Mitigations
+\f1\b0 \cf2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth3260\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5740\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \cb1 Threat
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Mitigation
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth3260\clftsWidth3 \clheight1120 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clcbpat5 \clwWidth5740\clftsWidth3 \clheight1120 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone OTST Replay Attack
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \cb3 \up0 \nosupersub \ulnone The unique nonce (
+\f4 \cf2 \cb6 jti
+\f2 \cf2 \cb3 ) in the JWT is checked against a distributed cache. If seen before, the OTST is rejected. The short expiry window further limits the attack surface.
+\f1 \cf0 \cb1 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth3260\clftsWidth3 \clheight1100 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5740\clftsWidth3 \clheight1100 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Private Key Compromise
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Keys are stored in HSMs, making extraction virtually impossible. Using dedicated keys for OTST signing limits the blast radius. Rapid key rotation procedures are in place.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth3260\clftsWidth3 \clheight820 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clcbpat5 \clwWidth5740\clftsWidth3 \clheight820 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Bank System Impersonation
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone mTLS with client certificates ensures that only systems with a valid, issued certificate can connect to the SISN API.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth3260\clftsWidth3 \clheight820 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5740\clftsWidth3 \clheight820 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Denial-of-Service (DoS)
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Cloud DDoS protection and API rate limiting (e.g., requests per second per bank) protect API availability.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth3260\clftsWidth3 \clheight820 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clcbpat5 \clwWidth5740\clftsWidth3 \clheight820 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Insider Threat
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone The immutable audit trail and principle of least privilege ensure all actions are logged and no single individual has unchecked access.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth3260\clftsWidth3 \clheight820 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5740\clftsWidth3 \clheight820 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Software Vulnerability
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Regular patching, automated vulnerability scanning, and a minimal attack surface (e.g., no public admin interfaces) reduce risk.
+\f1 \cf0 \up0 \nosupersub \ulnone \cf2 \cb3 \up0 \nosupersub \ulnone \cell \lastrow\row
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b \cf2 5. Compliance & Regulatory Alignment
+\f1\b0 \cf2 \
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f2 \cf2 The SISN architecture is designed to facilitate compliance:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f3 \cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone Audit Trails:
+\f2\b0 \cf2  Provides immutable records for auditors.\
+\ls2\ilvl0
+\f3 \cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone Transparency:
+\f2\b0 \cf2  Regulator nodes offer live visibility.\
+\ls2\ilvl0
+\f3 \cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone Control:
+\f2\b0 \cf2  Multi-sig and emergency freeze functions give regulators direct levers.\
+\ls2\ilvl0
+\f3 \cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone Data Sovereignty:
+\f2\b0 \cf2  Deployment can be configured to ensure all data remains within specific jurisdictional boundaries.\
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b \cf2 \
+6. Conclusion
+\f1\b0 \cf2 \
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f2 \cf2 The Clic.World SISN employs a modern, multi-faceted security architecture that leverages cryptographic proofs, automated enforcement, and rigorous operational practices. It is designed not merely as a secure application, but as a resilient and trustworthy piece of financial infrastructure. We welcome further review and discussion with your security teams to address any specific concerns or requirements.\
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb8 \
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b \cf2 \cb3 Appendix A: Glossary
+\f2\b0 \cf2 \uc0\u8232 
+\f0\b \cf2 Appendix B: Detailed Cryptographic Specifications
+\f2\b0 \cf2 \uc0\u8232 
+\f0\b \cf2 Appendix C: Certificate Management Process for Banks
+\f2\b0 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f6\b \cf2 SISN Process Flow
+\f2\b0 \cf2 \
+ \
+\
+\
+\
+\
+\
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b \cf2 Appendix A: Glossary of Key Security Terms
+\f1\b0 \cf2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2320\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3120\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3140\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \cb1 Term
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Definition
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Relevance to SISN
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth2320\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3120\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3140\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone mTLS (Mutual TLS)
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A security protocol where both the client and server authenticate each other using digital certificates, creating a secure, encrypted communication channel.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Used to secure all API connections between banks and the SISN platform, ensuring only authorized participants can connect.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2320\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3120\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3140\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone JWT (JSON Web Token)
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A compact, URL-safe means of representing claims to be transferred between two parties. The claims are encoded in a JSON object and digitally signed.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone The format of the One-Time Settlement Token (OTST). Provides a signed, self-contained settlement instruction.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth2320\clftsWidth3 \clheight1380 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3120\clftsWidth3 \clheight1380 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3140\clftsWidth3 \clheight1380 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone OTST (One-Time Settlement Token)
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A specialized JWT that represents a single, time-bound, non-transferable instruction for an interbank settlement.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone The core innovation of SISN. Replaces traditional settlement messages with a cryptographically secure token.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2320\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3120\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3140\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Nonce ("Number used once")
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A random or pseudo-random number that is issued in an authentication protocol to ensure that old communications cannot be reused in replay attacks.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \cb3 \up0 \nosupersub \ulnone The 
+\f4 \cf2 \cb6 jti
+\f2 \cf2 \cb3  claim in the OTST JWT. Ensures each settlement instruction is unique and prevents replay attacks.
+\f1 \cf0 \cb1 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth2320\clftsWidth3 \clheight1940 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3120\clftsWidth3 \clheight1940 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3140\clftsWidth3 \clheight1940 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone HSM (Hardware Security Module)
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A physical computing device that safeguards and manages digital keys, performs encryption and decryption functions, and provides strong authentication.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Used to protect the root secrets of the network: Stellar account keys and OTST signing keys. Keys cannot be extracted from HSMs.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2320\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3120\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3140\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Service Mesh
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A dedicated infrastructure layer for facilitating service-to-service communication between microservices, often using sidecar proxies.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone (Istio) Used to automatically enforce mTLS and encrypt all traffic between internal Slic.World microservices, creating a zero-trust network.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth2320\clftsWidth3 \clheight1380 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3120\clftsWidth3 \clheight1380 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3140\clftsWidth3 \clheight1380 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Public Key Directory (PKD)
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A trusted service that acts as a source of truth for the public keys needed to verify the digital signatures of participants.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Banks query the PKD to get the public key needed to verify an OTST signature from another bank.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2320\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3120\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3140\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Immutable Audit Trail
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A log of events where past entries cannot be altered or deleted. Any attempt to modify data is detectable.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Provided by the Stellar blockchain (for core settlements) and internal immutable logging systems (for rich event data). Critical for non-repudiation.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth2320\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3120\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3140\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Non-Repudiation
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A legal concept that ensures a party to a contract or communication cannot deny the authenticity of their signature on a document or their sending of a message.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Achieved by cryptographically signing OTSTs with keys held in HSMs. A bank cannot deny having issued a settlement instruction.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2320\clftsWidth3 \clheight1940 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth3120\clftsWidth3 \clheight1940 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth3140\clftsWidth3 \clheight1940 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Zero-Trust Architecture
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A security model that requires all users, whether inside or outside the organization's network, to be authenticated, authorized, and continuously validated before being granted access.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone The foundational principle of the SISN architecture. Applied via mTLS for all connections and service mesh for internal communications.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth2320\clftsWidth3 \clheight1680 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2880
+\clvertalc \clcbpat5 \clwWidth3120\clftsWidth3 \clheight1680 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx5760
+\clvertalc \clcbpat5 \clwWidth3140\clftsWidth3 \clheight1680 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone SIEM (Security Info & Event Mgmt)
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone A solution that provides real-time analysis of security alerts generated by applications and network hardware.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Used to aggregate and correlate logs from all components (API Gateway, services, HSMs) for threat detection and incident response.
+\f1 \cf0 \up0 \nosupersub \ulnone 
+\f2 \cf7 \cb3 \up0 \nosupersub \ulnone \cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb8 \
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b \cf2 \cb1 \
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\sa274\partightenfactor0
+\cf2 \cb3 Appendix B: Detailed Cryptographic Specifications
+\f1\b0 \cf2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1780\clftsWidth3 \clheight540 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2160
+\clvertalc \clshdrawnil \clwWidth2180\clftsWidth3 \clheight540 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth1440\clftsWidth3 \clheight540 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx6480
+\clvertalc \clshdrawnil \clwWidth2760\clftsWidth3 \clheight540 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \cb1 Component
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Algorithm & Specifications
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Key Length / Parameters
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Purpose & Justification
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth1780\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2160
+\clvertalc \clcbpat5 \clwWidth2180\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clcbpat5 \clwWidth1440\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx6480
+\clvertalc \clcbpat5 \clwWidth2760\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone OTST JWT Signing
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone ES256
+\f2\b0 \cf2  (ECDSA using P-256 curve and SHA-256)
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone P-256 (secp256r1)
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Provides strong digital signatures with smaller key sizes and better performance than RSA. A NIST-recommended standard.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1780\clftsWidth3 \clheight1100 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2160
+\clvertalc \clshdrawnil \clwWidth2180\clftsWidth3 \clheight1100 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth1440\clftsWidth3 \clheight1100 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx6480
+\clvertalc \clshdrawnil \clwWidth2760\clftsWidth3 \clheight1100 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Stellar Transaction Signing
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Ed25519
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone 256-bit
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone The native and highly performant public-key signature system used by the Stellar network.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth1780\clftsWidth3 \clheight2220 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2160
+\clvertalc \clcbpat5 \clwWidth2180\clftsWidth3 \clheight2220 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clcbpat5 \clwWidth1440\clftsWidth3 \clheight2220 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx6480
+\clvertalc \clcbpat5 \clwWidth2760\clftsWidth3 \clheight2220 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone mTLS Certificates
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone RSA or ECDSA
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone 2048-bit RSA or 256-bit ECDSA
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Standard for X.509 certificates used in TLS. Automatically managed by the service mesh for internal traffic. Bank certificates will be issued with a 2048-bit RSA or stronger.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1780\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2160
+\clvertalc \clshdrawnil \clwWidth2180\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth1440\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx6480
+\clvertalc \clshdrawnil \clwWidth2760\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Hash Function
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone SHA-256
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone 256-bit
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Used for hashing within JWTs and across the system. A robust and industry-standard cryptographic hash function.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth1780\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2160
+\clvertalc \clcbpat5 \clwWidth2180\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clcbpat5 \clwWidth1440\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx6480
+\clvertalc \clcbpat5 \clwWidth2760\clftsWidth3 \clheight1660 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Key Management
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone FIPS 140-2 Level 3
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone N/A
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone All HSM modules will be validated to at least FIPS 140-2 Level 3, ensuring rigorous physical and logical security standards for key storage.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1780\clftsWidth3 \clheight3980 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx2160
+\clvertalc \clshdrawnil \clwWidth2180\clftsWidth3 \clheight3980 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth1440\clftsWidth3 \clheight3980 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx6480
+\clvertalc \clshdrawnil \clwWidth2760\clftsWidth3 \clheight3980 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone OTST JWT Claims
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone See below
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone N/A
+\f1 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f4 \cf2 \cb6 \up0 \nosupersub \ulnone iss
+\f0\b \cf2 \cb3 :
+\f2\b0 \cf2  Issuer Stellar Account ID\
+
+\f4 \cf2 \cb6 aud
+\f0\b \cf2 \cb3 :
+\f2\b0 \cf2  Audience Stellar Account ID\
+
+\f4 \cf2 \cb6 jti
+\f0\b \cf2 \cb3 :
+\f2\b0 \cf2  UUIDv4 Nonce\
+
+\f4 \cf2 \cb6 iat
+\f0\b \cf2 \cb3 :
+\f2\b0 \cf2  Issued At Time (Unix)\
+
+\f4 \cf2 \cb6 exp
+\f0\b \cf2 \cb3 :
+\f2\b0 \cf2  Expiration Time (e.g., 
+\f4 \cf2 \cb6 iat + 300s
+\f2 \cf2 \cb3 )\
+
+\f4 \cf2 \cb6 amount
+\f0\b \cf2 \cb3 :
+\f2\b0 \cf2  String representing amount in stroops\
+
+\f4 \cf2 \cb6 currency
+\f0\b \cf2 \cb3 :
+\f2\b0 \cf2  Asset code (e.g., "UGX-T")
+\f1 \cf0 \cb1 \up0 \nosupersub \ulnone 
+\f2 \cf7 \cb3 \up0 \nosupersub \ulnone \cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb8 \
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b \cf2 \cb1 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\sa274\partightenfactor0
+\cf2 \cb3 Appendix C: Certificate Management Process for Participating Banks
+\f1\b0 \cf2 \
+
+\f0\b \cf2 Objective:
+\f2\b0 \cf2  To define a secure and auditable process for issuing, distributing, renewing, and revoking client certificates for bank-to-SISN mTLS authentication.\
+
+\f0\b \cf2 1. Roles and Responsibilities:
+\f2\b0 \cf2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f3 \cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone Clic.World SISN Team:
+\f2\b0 \cf2  Acts as the Certificate Authority (CA) for bank client certificates. Responsible for operating the secure certificate issuance platform.\
+\ls3\ilvl0
+\f3 \cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}
+\f0\b \cf2 \cb3 \up0 \nosupersub \ulnone Bank InfoSec Team:
+\f2\b0 \cf2  Responsible for generating the Certificate Signing Request (CSR) on a secure server, safeguarding the private key, and installing the issued certificate.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b \cf2 2. Certificate Lifecycle:
+\f2\b0 \cf2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth3080\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5920\clftsWidth3 \clheight260 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \cb1 Phase
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Process
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth3080\clftsWidth3 \clheight2240 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clcbpat5 \clwWidth5920\clftsWidth3 \clheight2240 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Onboarding (Issuance)
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone 1. Bank generates a CSR and private key on the server that will host the SISN client.\
+2. Bank InfoSec team submits the CSR via a secure portal (itself protected by mTLS) to the Clic.World CA.\
+3. Clic.World CA validates the request, signs the certificate, and returns it to the bank via the portal.\
+4. Certificate is installed on the bank's client server. The private key 
+\f0\b \cf2 must never
+\f2\b0 \cf2  be transmitted.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth3080\clftsWidth3 \clheight820 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5920\clftsWidth3 \clheight820 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Validation
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone The SISN API Gateway is configured to trust the Clic.World CA root certificate. It will therefore validate any client certificate signed by it.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth3080\clftsWidth3 \clheight820 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clcbpat5 \clwWidth5920\clftsWidth3 \clheight820 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Usage
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone The bank's system presents this certificate during the TLS handshake any time it connects to the SISN API Gateway.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth3080\clftsWidth3 \clheight1380 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5920\clftsWidth3 \clheight1380 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Renewal
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Certificates will have a defined validity period (e.g., 1 year). Banks must initiate a renewal process by generating a new CSR and following the issuance process before the old certificate expires. Automated alerts will be sent 30 and 7 days prior to expiry.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clwWidth3080\clftsWidth3 \clheight2220 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clcbpat5 \clwWidth5920\clftsWidth3 \clheight2220 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Revocation
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Trigger:
+\f2\b0 \cf2  A bank's private key is suspected to be compromised, or the bank offboards from the network.\
+
+\f0\b \cf2 Process:
+\f2\b0 \cf2  The bank immediately notifies Clic.World via a designated emergency channel. Clic.World adds the certificate to a Certificate Revocation List (CRL) and publishes it to the API Gateway. The gateway will immediately reject any connection attempt using the revoked certificate.
+\f1 \cf0 \up0 \nosupersub \ulnone \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth3080\clftsWidth3 \clheight1100 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl0 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5920\clftsWidth3 \clheight1100 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \up0 \nosupersub \ulnone Auditing
+\f1\b0 \cf0 \up0 \nosupersub \ulnone \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \up0 \nosupersub \ulnone Every action in the certificate lifecycle (request, issue, renew, revoke) is logged to the immutable audit trail, creating a complete history for compliance and forensic analysis.
+\f1 \cf0 \up0 \nosupersub \ulnone 
+\f2 \cf2 \cb3 \up0 \nosupersub \ulnone \cell \lastrow\row
+\pard\pardeftab720\sa274\partightenfactor0
+
+\f0\b \cf2 3. Technical Requirements for Banks:
+\f2\b0 \cf2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0\cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}\cf2 \cb3 \up0 \nosupersub \ulnone Must generate keys and CSRs using cryptographic modules that meet organisational security policy.\
+\ls4\ilvl0\cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}\cf2 \cb3 \up0 \nosupersub \ulnone Must protect the private key using appropriate mechanisms (e.g., file system permissions, hardware storage).\
+\ls4\ilvl0\cf2 \cb1 \up0 \nosupersub \ulnone {\listtext	\uc0\u8226 	}\cf2 \cb3 \up0 \nosupersub \ulnone Must ensure the client server's clock is synchronised (NTP) to ensure certificate validity periods are checked correctly.\
+\pard\pardeftab720\partightenfactor0
+\cf2 This process ensures that the identity of each connecting bank is cryptographically proven and can be managed throughout its lifecycle with a focus on security and auditability.\
+\
+\
+\
+\
+\
+\
+}

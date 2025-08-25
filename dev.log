@@ -1,0 +1,209 @@
+
+> my-v0-project@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.2.4
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.65:3001
+
+ ✓ Starting...
+ ✓ Ready in 2.2s
+ ○ Compiling / ...
+ ✓ Compiled / in 4.7s (3204 modules)
+ GET / 200 in 5778ms
+ ✓ Compiled in 1240ms (1584 modules)
+ ○ Compiling /api/stellar/getTokens ...
+ ✓ Compiled /api/stellar/getTokens in 706ms (3483 modules)
+ GET /api/stellar/getTokens 200 in 1098ms
+ ✓ Compiled /_not-found in 292ms (3487 modules)
+ GET /api/otc/getTokens 404 in 425ms
+ GET / 200 in 359ms
+ ✓ Compiled /api/stellar/balances/[userId] in 265ms (3489 modules)
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2993ms
+ ✓ Compiled /api/stellar/orders/[userId] in 315ms (3491 modules)
+ GET /api/stellar/orders/159648353303?status=open 404 in 855ms
+ GET /api/stellar/getTokens 200 in 29ms
+ GET /api/stellar/getTokens 200 in 19ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2306ms
+ GET /api/stellar/orders/159648353303?status=open 404 in 25ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2339ms
+ GET /api/stellar/orders/159648353303?status=open 404 in 32ms
+ GET /api/stellar/getTokens 200 in 23ms
+ GET /api/stellar/getTokens 200 in 5ms
+ ○ Compiling /api/lc/list ...
+ ✓ Compiled /api/lc/list in 503ms (3489 modules)
+ GET /api/lc/list?page=1&limit=20 200 in 565ms
+ GET /api/lc/list?page=1&limit=20 200 in 15ms
+ ✓ Compiled /api/lc/[id] in 335ms (3491 modules)
+ GET /api/lc/lc_demo_001 200 in 969ms
+ GET /api/lc/lc_demo_001 200 in 217ms
+ GET /api/lc/list?page=1&limit=20 200 in 23ms
+ GET /api/lc/list?page=1&limit=20 200 in 9ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2493ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 658ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 1938ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 578ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 585ms
+ GET /api/stellar/orders/159648353303?status=open 404 in 23ms
+ GET /api/stellar/getTokens 200 in 11ms
+ GET /api/stellar/getTokens 200 in 8ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2309ms
+ GET /api/stellar/orders/159648353303?status=open 404 in 28ms
+ GET /api/stellar/getTokens 200 in 19ms
+ GET /api/stellar/getTokens 200 in 10ms
+ GET /api/stellar/getTokens 200 in 33ms
+ GET /api/stellar/getTokens 200 in 6ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2631ms
+ GET /api/stellar/orders/159648353303?status=open 404 in 27ms
+No wallet verification method succeeded for user: demo_user
+No verified wallet found for user: demo_user
+ GET /api/stellar/balances/demo_user 404 in 2498ms
+No wallet verification method succeeded for user: testuser1
+No verified wallet found for user: testuser1
+ GET /api/stellar/balances/testuser1 404 in 2196ms
+ ✓ Compiled in 1463ms (3205 modules)
+ GET / 200 in 289ms
+ ✓ Compiled in 415ms (3205 modules)
+ GET / 200 in 95ms
+ ✓ Compiled in 313ms (3205 modules)
+ GET / 200 in 83ms
+ ✓ Compiled in 381ms (3205 modules)
+ GET / 200 in 84ms
+ ✓ Compiled in 334ms (3205 modules)
+ GET / 200 in 81ms
+ ✓ Compiled in 321ms (3205 modules)
+ GET / 200 in 82ms
+ ✓ Compiled in 433ms (3205 modules)
+ GET / 200 in 87ms
+ ✓ Compiled in 292ms (3205 modules)
+ GET / 200 in 75ms
+ ✓ Compiled /_not-found in 209ms (3195 modules)
+ GET /_next/static/css/app/layout.css?v=1756070569191 404 in 324ms
+ ✓ Compiled in 214ms (1588 modules)
+ ⨯ Error: Cannot find module './447.js'
+Require stack:
+- /Users/admin/clix_trading/.next/server/webpack-runtime.js
+- /Users/admin/clix_trading/.next/server/app/_not-found/page.js
+- /Users/admin/clix_trading/node_modules/next/dist/server/require.js
+- /Users/admin/clix_trading/node_modules/next/dist/server/load-components.js
+- /Users/admin/clix_trading/node_modules/next/dist/build/utils.js
+- /Users/admin/clix_trading/node_modules/next/dist/build/swc/options.js
+- /Users/admin/clix_trading/node_modules/next/dist/build/swc/index.js
+- /Users/admin/clix_trading/node_modules/next/dist/build/analysis/parse-module.js
+- /Users/admin/clix_trading/node_modules/next/dist/build/analysis/get-page-static-info.js
+- /Users/admin/clix_trading/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/admin/clix_trading/node_modules/next/dist/server/lib/router-server.js
+- /Users/admin/clix_trading/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:203:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/page.js:16:766681)
+    at Object.<anonymous> (.next/server/app/page.js:16:766739) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 935ms (3524 modules)
+ GET / 500 in 1399ms
+ GET / 200 in 82ms
+ GET / 200 in 9ms
+ GET / 200 in 306ms
+ GET /_next/static/css/app/layout.css?v=1756070600570 404 in 38ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 52ms
+ GET /_next/static/chunks/main-app.js?v=1756070600570 404 in 53ms
+ GET /_next/static/chunks/app/page.js 404 in 52ms
+ ✓ Compiled in 228ms (1830 modules)
+ ✓ Compiled in 194ms (1830 modules)
+ ✓ Compiled in 515ms (3491 modules)
+ ✓ Compiled in 387ms (3491 modules)
+ ✓ Compiled in 406ms (3491 modules)
+ ✓ Compiled in 336ms (3491 modules)
+ ✓ Compiled in 380ms (3491 modules)
+ ✓ Compiled in 629ms (3491 modules)
+ ✓ Compiled in 1166ms (3491 modules)
+ ✓ Compiled in 316ms (3491 modules)
+ ✓ Compiled in 297ms (3491 modules)
+ ✓ Compiled in 237ms (1826 modules)
+ ✓ Compiled in 177ms (1826 modules)
+ ✓ Compiled in 199ms (1826 modules)
+ ✓ Compiled in 578ms (3491 modules)
+ ✓ Compiled in 600ms (3491 modules)
+ ✓ Compiled in 406ms (3491 modules)
+ ✓ Compiled in 235ms (1826 modules)
+ ✓ Compiled in 495ms (3491 modules)
+ ✓ Compiled in 307ms (3491 modules)
+ ✓ Compiled in 294ms (1826 modules)
+ ✓ Compiled in 316ms (1826 modules)
+ ⨯ TypeError: Cannot read properties of undefined (reading 'call')
+    at Object.t [as require] (.next/server/webpack-runtime.js:1:143)
+    at JSON.parse (<anonymous>) {
+  digest: '1114609271'
+}
+TypeError: Cannot read properties of undefined (reading 'call')
+    at Object.t [as require] (.next/server/webpack-runtime.js:1:143)
+    at JSON.parse (<anonymous>)
+ ⨯ TypeError: Cannot read properties of undefined (reading 'call')
+    at Object.t [as require] (.next/server/webpack-runtime.js:1:143)
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 602ms (3520 modules)
+ ⨯ Error: Cannot find module './548.js'
+Require stack:
+- /Users/admin/clix_trading/.next/server/webpack-runtime.js
+- /Users/admin/clix_trading/.next/server/pages/_document.js
+- /Users/admin/clix_trading/node_modules/next/dist/server/require.js
+- /Users/admin/clix_trading/node_modules/next/dist/server/load-components.js
+- /Users/admin/clix_trading/node_modules/next/dist/build/utils.js
+- /Users/admin/clix_trading/node_modules/next/dist/build/swc/options.js
+- /Users/admin/clix_trading/node_modules/next/dist/build/swc/index.js
+- /Users/admin/clix_trading/node_modules/next/dist/build/analysis/parse-module.js
+- /Users/admin/clix_trading/node_modules/next/dist/build/analysis/get-page-static-info.js
+- /Users/admin/clix_trading/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/admin/clix_trading/node_modules/next/dist/server/lib/router-server.js
+- /Users/admin/clix_trading/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:203:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:339)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:381) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET / 500 in 2045ms
+ ✓ Compiled in 328ms (1826 modules)
+ ✓ Compiled in 182ms (1826 modules)
+ ✓ Compiled in 173ms (1826 modules)
+ ✓ Compiled in 171ms (1826 modules)
+ ✓ Compiled in 169ms (1826 modules)
+ ✓ Compiled in 184ms (1826 modules)
+ ✓ Compiled in 169ms (1826 modules)
+[?25h

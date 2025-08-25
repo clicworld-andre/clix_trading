@@ -1,0 +1,8012 @@
+# Documentation - https://documenter.getpostman.com/view/3143535/2s8YmNPhcg
+# The base URL is  https://api.clicstage.xyz/ and there are 4 micro services,  exchange, fedapi, payments, social banking,  so after the base url, the next item  is the micro services, and after that there are atleast 2 params, BAS_EURL/MICRO_SERVICE/ROUTE/functionName
+#
+
+{
+	"info": {
+		"_postman_id": "a7d2e516-56da-48e6-b332-272cbc8f6c81",
+		"name": "Clic Wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11979752"
+	},
+	"item": [
+		{
+			"name": "utils",
+			"item": [
+				{
+					"name": "getadverts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}fedapi/v3/v1/getbanners",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"v1",
+								"getbanners"
+							]
+						},
+						"description": "Get Homepage adverts"
+					},
+					"response": []
+				},
+				{
+					"name": "gettokens",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/v2/exchange/gettokens",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"v2",
+								"exchange",
+								"gettokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFavorites",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"0787719618\",\n    \"query\":\"\",\n    \"op_type\":\"transfer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://clic.world/fedapi/v4/v1/getfavorites",
+							"protocol": "https",
+							"host": [
+								"clic",
+								"world"
+							],
+							"path": [
+								"fedapi",
+								"v4",
+								"v1",
+								"getfavorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeFavorite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"0787719618\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://clic.world/fedapi/v4/v1/getfavorites",
+							"protocol": "https",
+							"host": [
+								"clic",
+								"world"
+							],
+							"path": [
+								"fedapi",
+								"v4",
+								"v1",
+								"getfavorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addFavorites",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"0787719618\",\n    \"fullName\": \"Emmanuel Mbonye\",\n    \"fav_address\": \"0787719618\",\n    \"fav_memo\": \"123454\",\n    \"op_type\": \"transfer\",\n    \"currency\": \"UGX\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://clic.world/fedapi/v4/v1/addFavorites",
+							"protocol": "https",
+							"host": [
+								"clic",
+								"world"
+							],
+							"path": [
+								"fedapi",
+								"v4",
+								"v1",
+								"addFavorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetKey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"0787719618\",\n    \"password\": \"Emmanuel Mbonye\",\n    \"session_id\": \"Emmanuel Mbonye\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://clic.world/fedapi/v4/users/changepinresetcode",
+							"protocol": "https",
+							"host": [
+								"clic",
+								"world"
+							],
+							"path": [
+								"fedapi",
+								"v4",
+								"users",
+								"changepinresetcode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "banks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userid\": \"159719618042\",\n    \"message\": \"159719618042\",\n    \"type\": \"sms\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/users/sendNotification",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"users",
+								"sendNotification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatedeviceinfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": \"159719618042\",\n    \"token\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v1/updatedeviceinfo",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v1",
+								"updatedeviceinfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mainpage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.clicworld.app/exchange/payments/services?currency=UGX&app=user&app_id=5&version=51",
+							"protocol": "https",
+							"host": [
+								"api",
+								"clicworld",
+								"app"
+							],
+							"path": [
+								"exchange",
+								"payments",
+								"services"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "UGX"
+								},
+								{
+									"key": "app",
+									"value": "user"
+								},
+								{
+									"key": "app_id",
+									"value": "5"
+								},
+								{
+									"key": "version",
+									"value": "51"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "All other endpoints"
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "Messages",
+							"item": [
+								{
+									"name": "GetMessages",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}fedapi/admin/getMessages",
+											"host": [
+												"{{URL}}fedapi"
+											],
+											"path": [
+												"admin",
+												"getMessages"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "UpdateMessage",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"body\": \"Hello there\",\n    \"title\": \"\",\n    \"id\": 3\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}fedapi/admin/updateMessage",
+											"host": [
+												"{{URL}}fedapi"
+											],
+											"path": [
+												"admin",
+												"updateMessage"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "New Request",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "GetAllUsers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/getusers?appid=1",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"getusers"
+									],
+									"query": [
+										{
+											"key": "appid",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUser",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/getuserdetail/0787719618",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"getuserdetail",
+										"0787719618"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "suspendUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"0787719618\",\n    \"reason\":\"check\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/suspenduser",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"suspenduser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reactivate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"\",\n    \"reason\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/suspenduser",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"suspenduser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "approveKYC",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"\",\n    \"reason\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/approveKYC",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"approveKYC"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "roles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/roles/1",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"roles",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSummary",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}fedapi/admin/getSummary",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"admin",
+										"getSummary"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "userwallets",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/getUserWallets/0787719618",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"getUserWallets",
+										"0787719618"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "adminLogin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"mbonyeemma@gmail.com\",\n    \"password\": \"Kampala123\",\n    \"ipaddress\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/admin/login",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"password\": \"123456789765\",\n    \"role\": \"admin\",\n    \"firstname\": \"John\",\n    \"last_name\": \"Doe\",\n    \"email\": \"johndoe\",\n    \"app_id\": \"5\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/adduser",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"adduser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/deleteUser",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"deleteUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resetAdminpassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"record_id\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/resetAdminpassword",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"resetAdminpassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "chargetransactions",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/v3/admin/chargetransactions/5",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"chargetransactions",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSystemUsers",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/getSystemUsers/5",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"getSystemUsers",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "searchuser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"search_param\":\"07877\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/searchuser",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"searchuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ChangePassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"currentPassword\":\"\",\n    \"newPassword\":\"\",\n    \"confirmNewPassword\":\"\",\n    \"email\":\"\"\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/v3/admin/changePassword",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v3",
+										"admin",
+										"changePassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateImageStatus",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"approved\",\n    \"image_id\": \"1\",\n    \"reason\": \"approved\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/admin/updateImageStatus",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"admin",
+										"updateImageStatus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendBroadCast",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"body\": \"Hello all\",\n    \"subject\": \"Hello\",\n    \"message_channel\": \"SMS\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/admin/sendBroadCast",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"admin",
+										"sendBroadCast"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "confirmBroadCast",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"body\": \"Hello all\",\n    \"subject\": \"Hello\",\n    \"message_channel\": \"SMS\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/admin/confirmBroadCast",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"admin",
+										"confirmBroadCast"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteBroadCast",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/admin/deleteBroadCast",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"admin",
+										"deleteBroadCast"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getBroadcastMessages",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}fedapi/admin/getBroadcastMessages",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"admin",
+										"getBroadcastMessages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAccessRights",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/fedapi/admin/getAccessRights",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"fedapi",
+										"admin",
+										"getAccessRights"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "saccoJWT",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}fedapi/saccojwt",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"saccojwt"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reject",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admincompleteRegManually",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"159515851530\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/users/admincompleteRegManually",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"users",
+										"admincompleteRegManually"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "KYC",
+					"item": [
+						{
+							"name": "getKYCDocuments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}fedapi/users/getKYCDocuments?user_type=company",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"users",
+										"getKYCDocuments"
+									],
+									"query": [
+										{
+											"key": "user_type",
+											"value": "company"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "socialbanks",
+					"item": [
+						{
+							"name": "getSaccUser",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSaccos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}fedapi/v1/getSaccos/159719618042",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"v1",
+										"getSaccos",
+										"159719618042"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "JoinSocialBank",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjE1OTcxOTYxODA0MiIsInVzZXJfdHlwZSI6ImluZGl2aWR1YWwiLCJ1c2VyX2lkIjoiMTU5NzE5NjE4MDQyIiwiYXBwSWQiOjUsImNvbXBhbnlfaWQiOiIxNTk3MTk2MTgwNDIiLCJpYXQiOjE3MzMyOTkzMDksImV4cCI6MTczMzMyMDkwOX0.m7M21m0tqXm-J2G6zlI3RkVTNEvMtOaLNMlNGQjDMTY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"159821023431\",\n  \"saccoid\": \"1009\",\n  \"password\": \"12345\",\n  \"amount\": \"240\",\n  \"currency\": \"KES\",\n  \"invite_code\": \"65D71AC6\",\n  \"joinType\": \"member\",\n  \"phone\": \"254715821023\",\n  \"payment_method\": \"MPESA\",\n  \"user_type\": \"new\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}socialbanking/accounts/regmember",
+									"host": [
+										"{{URL}}socialbanking"
+									],
+									"path": [
+										"accounts",
+										"regmember"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSaccoFees",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n    \"invite_code\": \"SB1008\",\n    \"joinType\": \"sacco\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}banking/groups/validateCode",
+									"host": [
+										"{{URL}}banking"
+									],
+									"path": [
+										"groups",
+										"validateCode"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "login-v4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postData\": \"IbiF2Tk2pJgdG9OmlPwJPSQT8Gs55J+roqy4jVXRRPlvhnjVpkSagMy3CKI6n5T2PY97eQi9hY\\/DKretSDnAT5XeExgPLvnRq7muLQceivZgGbDMWewM0GmtibesKWiBLObjwIx8HekMBlHxcu3tGOabBABD6GtSHRsgZl\\/QNJfMDZlW8lTQYf1NCY3KYBaq+N1eTudZts\\/OQVrqsV\\/64qI7SBY6ma3\\/WrFjXsaJYgJ2dozEeCB46ZJo7z\\/SUW3A5ElzWTd6tn+TS01H+T4g+qYFXtkHL0ZFjbEfXWdEfgqUJOVDdp\\/9QGixK8ABE0XwRk5k0JMAyK6Jhq0\\/2\\/idzAA4EbCSfWzx6FlN4Hmsh+k+Fz0MylwmNIurYEm4kx98SInXLJA5vYeFfICpyH+30TbD+1JrrupVqj5CCnDKO6KXpePFoLQ0UK3F9i+wCZyXupky2FqMzSYM3Ca0tDuT9Upu2qcgX\\/cu9U\\/9wdlm0Q1sdfBnwMrNSwDNuvU1GIMm\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.clicstage.xyz/clix/users/getuserinfo",
+							"protocol": "https",
+							"host": [
+								"api",
+								"clicstage",
+								"xyz"
+							],
+							"path": [
+								"clix",
+								"users",
+								"getuserinfo"
+							]
+						},
+						"description": "Signature is calculated as follows:Signature = sha512(dvID+password+model+username+FED_KEY);"
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"device_id\":\"dyzP0N54SpyKutT7hdb1yR:APA91bHJByT7Sd4qXq9uUuKiJ63qCFBlX_jtM-idDjIcq-hsPFzXiFkUfjwjKfBv2uW6i2un-8ZKjZZvLhE0iE2BKQs7pH1jmlgvYANFB6DB98QAgyq27tnHSnjFBVQHiwx8aLqogC1Y\",\"dev_model\":\"TECNO CD7\",\"username\":\"07877196181\",\"password\":\"5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5\",\"pin\":\"5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5\",\"app_id\":\"1\",\"signature\":\"f1000478cd6b1e97289a151200c60ef570805d887fdce6da192f0e4e6ada1d5f5a607d75763dfd5449a6878057e85ccc9c5636a50ea42f183227375e3d786335\"}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://clicmonkey.xyz/fedapi/v3/v1/getuserinfo",
+									"protocol": "http",
+									"host": [
+										"clicmonkey",
+										"xyz"
+									],
+									"path": [
+										"fedapi",
+										"v3",
+										"v1",
+										"getuserinfo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Oct 2020 12:47:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Length",
+									"value": "920"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "\n\n\n {\"success\":1,\"message\":\"Operation successful\",\"public_key\":\"GC5ZZN73YQX6K27KTEOXGUJYDKUAJYCVG7A54VE5DGVD72434PIQYR3K\",\"private_key\":\"DqNi\\/qqIxn7t3T+GuXXIvjNiATq2cpZSlorWSM8i2Sd6o3rdnCJs3V0PXqCJ72Xe3ZthTQUeW6iKWT9IZH3k8g==\",\"fullname\":\"Brian Emmanuel\",\"username\":\"07877196181\",\"telephone\":\"256787719618\",\"device_id\":\"fY_P-ZXFwow:APA91bFbhUyQFDqQ1eTiE_8MfSWG4Va26oAT67tMErcjyZTptr6RsFfr58vm7SFY9TQy6lW5hu_Cy3Qhw9bjKlcwOuJ1X4RwKxcFahFyPbPx0soLL7cflw8zxN8arcmCPInOZC-L4vB9\",\"created_at\":\"2020-02-21 14:01:50\",\"dev_id\":\"\",\"applicant_id\":\"\",\"country\":\"\",\"kycstatus\":\"Approved\",\"invite_code\":\"8989\",\"email\":\"emma@clic.world\",\"app_id\":5,\"saccoid\":1014,\"account_no\":\"256787719618\",\"favorites\":\"\",\"belongs_to_sacco\":\"Yes\",\"instance\":\"1\",\"currency\":\"UGX\",\"config\":\"uganda_config\",\"display_currency\":\"UGX\",\"pwd\":\"NTk5NDQ3MWFiYjAxMTEyYWZjYzE4MTU5ZjZjYzc0YjRmNTExYjk5ODA2ZGE1OWIzY2FmNWE5YzE3M2NhY2ZjNQ==\",\"dp\":\"\",\"version\":null}"
+						}
+					]
+				},
+				{
+					"name": "login-v3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"256787719618\",\n    \"password\": \"c2f6f156a9c528268e749b5cea39e9686a95a5faf0b006f74128267ba613bd77\",\n    \"app_id\": \"9\",\n    \"device_id\": \"techno1\",\n    \"signature\": \"6a6b0ddbaaefa768a24daaeb2cdfd8ca30825e7861f53b65c1d1ec6d38502bd7\",\n    \"dev_model\": \"modelss\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/users/login",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						},
+						"description": "Signature is calculated as follows:Signature = sha512(dvID+password+model+username+FED_KEY);"
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"device_id\":\"dyzP0N54SpyKutT7hdb1yR:APA91bHJByT7Sd4qXq9uUuKiJ63qCFBlX_jtM-idDjIcq-hsPFzXiFkUfjwjKfBv2uW6i2un-8ZKjZZvLhE0iE2BKQs7pH1jmlgvYANFB6DB98QAgyq27tnHSnjFBVQHiwx8aLqogC1Y\",\"dev_model\":\"TECNO CD7\",\"username\":\"07877196181\",\"password\":\"5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5\",\"pin\":\"5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5\",\"app_id\":\"1\",\"signature\":\"f1000478cd6b1e97289a151200c60ef570805d887fdce6da192f0e4e6ada1d5f5a607d75763dfd5449a6878057e85ccc9c5636a50ea42f183227375e3d786335\"}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://clicmonkey.xyz/fedapi/v3/v1/getuserinfo",
+									"protocol": "http",
+									"host": [
+										"clicmonkey",
+										"xyz"
+									],
+									"path": [
+										"fedapi",
+										"v3",
+										"v1",
+										"getuserinfo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Oct 2020 12:47:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Length",
+									"value": "920"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "\n\n\n {\"success\":1,\"message\":\"Operation successful\",\"public_key\":\"GC5ZZN73YQX6K27KTEOXGUJYDKUAJYCVG7A54VE5DGVD72434PIQYR3K\",\"private_key\":\"DqNi\\/qqIxn7t3T+GuXXIvjNiATq2cpZSlorWSM8i2Sd6o3rdnCJs3V0PXqCJ72Xe3ZthTQUeW6iKWT9IZH3k8g==\",\"fullname\":\"Brian Emmanuel\",\"username\":\"07877196181\",\"telephone\":\"256787719618\",\"device_id\":\"fY_P-ZXFwow:APA91bFbhUyQFDqQ1eTiE_8MfSWG4Va26oAT67tMErcjyZTptr6RsFfr58vm7SFY9TQy6lW5hu_Cy3Qhw9bjKlcwOuJ1X4RwKxcFahFyPbPx0soLL7cflw8zxN8arcmCPInOZC-L4vB9\",\"created_at\":\"2020-02-21 14:01:50\",\"dev_id\":\"\",\"applicant_id\":\"\",\"country\":\"\",\"kycstatus\":\"Approved\",\"invite_code\":\"8989\",\"email\":\"emma@clic.world\",\"app_id\":5,\"saccoid\":1014,\"account_no\":\"256787719618\",\"favorites\":\"\",\"belongs_to_sacco\":\"Yes\",\"instance\":\"1\",\"currency\":\"UGX\",\"config\":\"uganda_config\",\"display_currency\":\"UGX\",\"pwd\":\"NTk5NDQ3MWFiYjAxMTEyYWZjYzE4MTU5ZjZjYzc0YjRmNTExYjk5ODA2ZGE1OWIzY2FmNWE5YzE3M2NhY2ZjNQ==\",\"dp\":\"\",\"version\":null}"
+						}
+					]
+				},
+				{
+					"name": "federation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "clicmonkey.xyz/fedapi/v3/users/federation?username=07877196181*clic.world",
+							"host": [
+								"clicmonkey",
+								"xyz"
+							],
+							"path": [
+								"fedapi",
+								"v3",
+								"users",
+								"federation"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "07877196181*clic.world"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "federation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "clicmonkey.xyz/fedapi/v3/users/federation?username=07877196181*clicmonkey.xyz",
+									"host": [
+										"clicmonkey",
+										"xyz"
+									],
+									"path": [
+										"fedapi",
+										"v3",
+										"users",
+										"federation"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "07877196181*clicmonkey.xyz"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 24 Mar 2022 12:16:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "PHPSESSID=439a61f0d252b83ac367047595838d72; path=/"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "\n\n\n {\"response\":0,\"message\":\"account not found\"}"
+						}
+					]
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pwd_reset_str\": \"XCSDDEERER\",\r\n    \"username\": \"0705434438\",\r\n    \"email\": \"mark@clic.world\",\r\n    \"pwd\": \"12345\",\r\n    \"tel\": \"256705434438\",\r\n    \"img_id\": \"35\",\r\n    \"app_id\": \"5\",\r\n    \"dvID\": \"3\",\r\n    \"pin\": \"12345\",\r\n    \"regtype\":\"P2P\",\r\n    \"signature\": \"7a468b3c1bb6e594c4b87a64ead3c2cbb2420fdbee25f3b647e69c240617a37b1e0eabcb8d32ec3a71255d01d81d263f5b265634c372085912f1c12a10e315d32\",\r\n    \"currency\": \"UGX\",\r\n    \"invite_code\": \"\",\r\n    \"first_name\": \"mark\",\r\n    \"last_name\": \"nat\",\r\n    \"fullname\": \"mark nat\",\r\n    \"sendsms\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/users/createclicuser",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"users",
+								"createclicuser"
+							]
+						},
+						"description": "signature = sha512(device_id+ FED_KEY + fullname + username + phonenumber + RandomUserId + currency + hash512(password) + APP_ID);"
+					},
+					"response": [
+						{
+							"name": "Signup user exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pwd_reset_str\": \"XCSDDEERER\",\r\n    \"username\": \"0705434438\",\r\n    \"email\": \"mark@clic.world\",\r\n    \"pwd\": \"12345\",\r\n    \"tel\": \"256705434438\",\r\n    \"img_id\": \"35\",\r\n    \"app_id\": \"5\",\r\n    \"dvID\": \"3\",\r\n    \"pin\": \"12345\",\r\n    \"signature\": \"7a468b3c1bb6e594c4b87a64ead3c2cbb2420fdbee25f3b647e69c240617a37b1e0eabcb8d32ec3a71255d01d81d263f5b265634c372085912f1c12a10e315d3\",\r\n    \"currency\": \"UGX\",\r\n    \"invite_code\": \"\",\r\n    \"first_name\": \"mark\",\r\n    \"regtype\": \"P2B\",\r\n    \"last_name\": \"nat\",\r\n    \"fullname\": \"mark nat\",\r\n    \"sendsms\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://clicmonkey.xyz/fedapi/v3/users/creatependinguser",
+									"protocol": "http",
+									"host": [
+										"clicmonkey",
+										"xyz"
+									],
+									"path": [
+										"fedapi",
+										"v3",
+										"users",
+										"creatependinguser"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 24 Mar 2022 12:19:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "\n\n\n {\"response\":400,\"message\":\"Username already exists\"}"
+						}
+					]
+				},
+				{
+					"name": "verifyOTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"76751\",\r\n    \"email_code\":\"mbonyeemma@gmail.com\",\r\n    \"app_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/users/smsverify",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"users",
+								"smsverify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resendOtp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tel\": \"0787719718\",\r\n    \"username\": \"0787719618\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v3/users/resendcode",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"users",
+								"resendcode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email verification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"20719293\",\r\n    \"username\": \"emma\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v3/users/authkey",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"users",
+								"authkey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resendEmail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"mbonyeemma@gmail.com\",\n\"username\":\"0787719618\",\n\"app_id\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v3/users/resendemailcode",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"users",
+								"resendemailcode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Verifaction Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"emma@gmail.com\",\r\n    \"username\": \"emma\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v3/users/changemail",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"users",
+								"changemail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserInformation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\": \"256787719618\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.clicworld.app/fedapi/v1/getuserinformation",
+							"protocol": "https",
+							"host": [
+								"api",
+								"clicworld",
+								"app"
+							],
+							"path": [
+								"fedapi",
+								"v1",
+								"getuserinformation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PinReset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"256782752513\",\r\n    \"token\": \"63ca5ecce6295\",\r\n    \"newpassword\": \"123456789\",\r\n    \"confirmnewpassword\": \"123456789\",\r\n    \"signature\": \"e7ce421d1c45531655e81540d9729227ccba23625fd3c5bc2d38f65994b4f7eb20482e9610de6c600318db9ba6eaa99ff476f4714d9f3099dadfe31bf4c5e104\",\r\n    \"device_id\": \"\",\r\n    \"dev_model\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/forgotpinreset",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"forgotpinreset"
+							]
+						},
+						"description": "Signature = sha256(username+token+newpassword+confirmnewpassword+device_id+FED_KEY);\r\nPIN is sha256"
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"159719618042\",\r\n  \"currentpassword\": \"\",\r\n  \"newpassword\": \"\",\r\n  \"confirmnewpassword\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v1/changepassword",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v1",
+								"changepassword"
+							]
+						},
+						"description": "Signature = sha256(username+token+newpassword+confirmnewpassword+device_id+FED_KEY);\r\nPIN is sha256"
+					},
+					"response": []
+				},
+				{
+					"name": "checkOtp-Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"\",\n    \"username\": \"\",\n    \"app_id\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v3/users/checkOtp",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"users",
+								"checkOtp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetQRSessionKey",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"\",\n    \"username\": \"\",\n    \"app_id\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v3/users/sessionKey",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"users",
+								"sessionKey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetQRLoginStatus",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v3/users/qrLogin/zXWa2NqZkHVHAemnmomMtPgvQAJvCuqeR0S1rb0J",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"users",
+								"qrLogin",
+								"zXWa2NqZkHVHAemnmomMtPgvQAJvCuqeR0S1rb0J"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadImage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "0787719618",
+									"type": "text"
+								},
+								{
+									"key": "idDocType",
+									"value": "ID",
+									"type": "text"
+								},
+								{
+									"key": "idDocSubType",
+									"value": "ID_FRONT",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"type": "file",
+									"src": "/Users/mac2017/Downloads/WhatsApp Image 2022-10-12 at 16.31.04.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}users/imageUpload",
+							"host": [
+								"{{URL}}users"
+							],
+							"path": [
+								"imageUpload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "smsverifyAndAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"\",\n    \"email_code\": \"\",\n    \"username\": \"\",\n    \"app_id\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}users/smsverifyAndAccount",
+							"host": [
+								"{{URL}}users"
+							],
+							"path": [
+								"smsverifyAndAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendEmailNotification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"source\": \"jwtsdfrtopurtrwadsd9043898754\",\n    \"body\": \"Emma\",\n    \"email\": \"mbonyeemma@gmail.com\",\n    \"subject\": \"Clic2Go\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/users/sendmailclient",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"users",
+								"sendmailclient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAuthUserInformation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}fedapi/v1/getauthenticateduser",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v1",
+								"getauthenticateduser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update2FAStatus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v1/update2FAStatus",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v1",
+								"update2FAStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "syncmembers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"159719618042\",\n    \"contacts\": [\n        {\"name\": \"emma\",\"phone\": \"256787719618\"}\n    ],\n    \"app_id\": 5,\n    \"currency\":\"UGX\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/users/syncmembers",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"users",
+								"syncmembers"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "The following provides endpoints for user authentication and account management"
+		},
+		{
+			"name": "exchange",
+			"item": [
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "addCharge",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"app_id\": \"\",\n  \"trans_type\": \"\",\n  \"currency\": \"\",\n  \"payment_method\": \"\",\n  \"token_id\": \"\",\n  \"fee_account\": \"\",\n  \"isPercentage\": \"\",\n  \"charge_amount\": \"\",\n  \"percentage_amount\": \"\",\n  \"cap_amount\": \"\",\n  \"mini_trans_amount\": \"\",\n  \"max_trans_amount\": \"\"\n}"
+								},
+								"url": {
+									"raw": "[YourServerURL]/addCharge",
+									"host": [
+										"[YourServerURL]"
+									],
+									"path": [
+										"addCharge"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editCharge",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"c_id\": \"\",\n  \"app_id\": \"\",\n  \"trans_type\": \"\",\n  \"currency\": \"\",\n  \"payment_method\": \"\",\n  \"token_id\": \"\",\n  \"fee_account\": \"\",\n  \"isPercentage\": \"\",\n  \"charge_amount\": \"\",\n  \"percentage_amount\": \"\",\n  \"cap_amount\": \"\",\n  \"mini_trans_amount\": \"\",\n  \"max_trans_amount\": \"\"\n}"
+								},
+								"url": {
+									"raw": "[YourServerURL]/editCharge",
+									"host": [
+										"[YourServerURL]"
+									],
+									"path": [
+										"editCharge"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "removeCharge",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"c_id\": \"\"\n}"
+								},
+								"url": {
+									"raw": "[YourServerURL]/removeCharge",
+									"host": [
+										"[YourServerURL]"
+									],
+									"path": [
+										"removeCharge"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "charges",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/exchange/admin/addCharge",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"exchange",
+										"admin",
+										"addCharge"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddActionLimits",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"payment_method\": \"0\",\n    \"min_amount\": \"0\",\n    \"max_amount\": \"0\",\n    \"currency\": \"0\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/exchange/admin/AddActionLimits",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"exchange",
+										"admin",
+										"AddActionLimits"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getLimits",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}exchange/admin/getActionLimits",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"admin",
+										"getActionLimits"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteLimit",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}exchange/admin/deleteLimit/12",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"admin",
+										"deleteLimit",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "qualifiers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetGraphData",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}exchange/admin/GetGraphData/month",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"admin",
+										"GetGraphData",
+										"month"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetGraphDataAmounts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}exchange/admin/GetGraphDataAmounts/month",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"admin",
+										"GetGraphDataAmounts",
+										"month"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "transactionreceivedhook",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"txId\": \"TkuJdGXo7VjjbjWKiDVa\",\n    \"reason\": \"transaction credited twice\",\n    \"action\": \"settlemet\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/exchange/callback",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"exchange",
+										"callback"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SuspendWallet",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"inactive\",\n    \"walletId\":\"\",\n    \"reason\": \"transaction credited twice\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/admin/SuspendWallet",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"admin",
+										"SuspendWallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateHeldTransaction",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"transId\": \"23456789\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/admin/updateHeldTransaction",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"admin",
+										"updateHeldTransaction"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateExpiredTransaction",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"transId\": \"23456789\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/admin/updateExpiredTransaction",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"admin",
+										"updateExpiredTransaction"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteMessage",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"transId\": \"23456789\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/admin/updateExpiredTransaction",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"admin",
+										"updateExpiredTransaction"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SystemLog",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}fedapi/admin/SystemLog",
+									"host": [
+										"{{URL}}fedapi"
+									],
+									"path": [
+										"admin",
+										"SystemLog"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "auth_token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"auth_token\": \"612697\",\r\n    \"merchant_username\":\"0787719618\",\r\n    \"client_username\":\"0787719618\",\r\n    \"signature\": \"NTk3MmFjZTMzNzJlM2Q0YTQzZGQwMWVjYTk5OTJmNDY4MjQwMmM5NTk3NDUyODY4OThiODFmNTY3NGMzOGE0NA==\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cliix.co/v3/exchange/validateRequest",
+							"protocol": "https",
+							"host": [
+								"cliix",
+								"co"
+							],
+							"path": [
+								"v3",
+								"exchange",
+								"validateRequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validateCode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"auth_token\": \"699372\",\r\n    \"username\":\"0787719618\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cliix.co/exchange/exchange/validateCode",
+							"protocol": "https",
+							"host": [
+								"cliix",
+								"co"
+							],
+							"path": [
+								"exchange",
+								"exchange",
+								"validateCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuyAssets",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"asset_to_buy\": \"UGX\",\r\n    \"asset_to_sell\": \"UGX\",\r\n    \"buying_amount\": \"500\",\r\n    \"selling_amount\": \"500\",\r\n    \"payment_method\": \"MPESA\",\r\n    \"recepient_bank_no\": \"1005\",\r\n    \"recepient_account\": \"159719618042\",\r\n    \"signature\": \"\",\r\n    \"username\": \"159719618042\",\r\n    \"password\": \"05532\",\r\n    \"issuer\": \"GANDGDF7ZHF7RVXMI53PUSCMVWEFANGTZ4RLEH2DGPDFI5BGWYOLAXRR\",\r\n    \"memo\": \"\",\r\n    \"item_fee\": \"\",\r\n    \"sender_account_number\": \"0787719618\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/exchange/buy",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"exchange",
+								"buy"
+							]
+						},
+						"description": "$dataToSign =  $asset_to_sell.$selling_amount.$asset_to_buy.$buying_amount.$username.$payment_method.$recepient_account_number.FED_KEY;\r\n$GeneratedSignature = base64_encode(hash('sha256',$dataToSign));"
+					},
+					"response": []
+				},
+				{
+					"name": "SellAssets",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"asset_to_buy\": \"KES\",\r\n    \"asset_to_sell\": \"KES\",\r\n    \"buying_amount\": \"70\",\r\n    \"selling_amount\": \"70\",\r\n    \"payment_method\": \"BANK_TRANSFER\",\r\n    \"recepient_bank_no\": \"1008\",\r\n    \"recepient_account\": \"10084535174\",\r\n    \"signature\": \"\",\r\n    \"username\": \"159719618042\",\r\n    \"password\": \"05532\",\r\n    \"issuer\": \"GANDGDF7ZHF7RVXMI53PUSCMVWEFANGTZ4RLEH2DGPDFI5BGWYOLAXRR\",\r\n    \"memo\": \"\",\r\n    \"item_fee\": \"\",\r\n    \"sender_member_id\": \"1008003\",\r\n    \"sender_account_number\": \"159719618042\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:8000/exchange/sell",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"exchange",
+								"sell"
+							]
+						},
+						"description": "$dataToSign =  $asset_to_sell.$selling_amount.$asset_to_buy.$buying_amount.$username.$payment_method.$recepient_account_number.FED_KEY;\r\n$GeneratedSignature = base64_encode(hash('sha256',$dataToSign));"
+					},
+					"response": []
+				},
+				{
+					"name": "GetTransactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/merchant/getallexchangetransactions",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"merchant",
+								"getallexchangetransactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserTransactions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cliix.co/v3/exchange/usertransactions/0787719618",
+							"protocol": "https",
+							"host": [
+								"cliix",
+								"co"
+							],
+							"path": [
+								"v3",
+								"exchange",
+								"usertransactions",
+								"0787719618"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserTransactionDetail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cliix.co/v3/exchange/transaction/2205090434269497857248",
+							"protocol": "https",
+							"host": [
+								"cliix",
+								"co"
+							],
+							"path": [
+								"v3",
+								"exchange",
+								"transaction",
+								"2205090434269497857248"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "account_statement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"0787719618\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/v3/exchange/statement?currency=UGX",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"v3",
+								"exchange",
+								"statement"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "UGX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin_statement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"app_id\": 4,\n    \"from_date\": \"20211001\",\n    \"to_date\": \"20221120\",\n    \"status\": \"success\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cliix.co/v2/admin/search_transactions",
+							"protocol": "https",
+							"host": [
+								"cliix",
+								"co"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"search_transactions"
+							]
+						},
+						"description": "The are the params of search;\n\nall,pending,success,failed"
+					},
+					"response": []
+				},
+				{
+					"name": "banks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://exchange.clic.world/v3/payments/banks",
+							"protocol": "https",
+							"host": [
+								"exchange",
+								"clic",
+								"world"
+							],
+							"path": [
+								"v3",
+								"payments",
+								"banks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tokens",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/v3/exchange/tokens",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"v3",
+								"exchange",
+								"tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetRates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/v3/exchange/rates",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"v3",
+								"exchange",
+								"rates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "swap",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selling\": \"KES\",\n    \"buying\": \"UGX\",\n\t\"sellingAmt\":1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/v3/exchange/swap",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"v3",
+								"exchange",
+								"swap"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "initiliseBiller",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selling\": \"KES\",\n    \"buying\": \"UGX\",\n\t\"sellingAmt\":1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/v3/exchange/swap",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"v3",
+								"exchange",
+								"swap"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveWallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"0787729728\",\n    \"password\": \"c2f6f156a9c528268e749b5cea39e9686a95a5faf0b006f74128267ba613bd77\",\n    \"walletUsername\": \"0787729718\",\n    \"walletName\": \"ema\",\n    \"walletType\": \"default\",\n    \"isDefault\": \"yes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/generateWallet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"generateWallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ValidateRequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bankId\": \"1000\",\n    \"accountNumber\": \"256787719618\",\n    \"service_code\": \"CLIC_DIRECT\",\n    \"currency\": \"UGX\",\n    \"amount\": 90,\n    \"requestId\": \"32392302\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/exchange/verifybankAccount",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"exchange",
+								"verifybankAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This provides an api for exchange "
+		},
+		{
+			"name": "wallet",
+			"item": [
+				{
+					"name": "Sub Wallets",
+					"item": [
+						{
+							"name": "Create Sub Wallet",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"password\": \"password456\",\n    \"walletName\": \"MyWallet\",\n    \"walletType\": \"subwallet\",\n    \"purpose\": 1,\n    \"isDefault\": \"no\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/exchange/generateWallet",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"exchange",
+										"generateWallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Request to print",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"card_no\": \"12345\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/payments/addPrintRequest",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"payments",
+										"addPrintRequest"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetPrintStatus",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/payments/getPrintRequest/12345",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"payments",
+										"getPrintRequest",
+										"12345"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetPrintRequests",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}exchange/admin/getPrintRequests?category=1",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"admin",
+										"getPrintRequests"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSubWalletPurposes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}exchange/payments/subwalletpurposes",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"payments",
+										"subwalletpurposes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetWallets",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/exchange/payments/wallets",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"exchange",
+										"payments",
+										"wallets"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "addcards",
+					"item": [
+						{
+							"name": "GetQRCardByWallet",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}clicpay/settings/GetQRCardByWallet/159719618042",
+									"host": [
+										"{{URL}}clicpay"
+									],
+									"path": [
+										"settings",
+										"GetQRCardByWallet",
+										"159719618042"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cardpinreset",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"walletId\": \"\",\n    \"currentPin\": \"\",\n    \"newPin\": \"\",\n    \"newPinConfirm\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}clicpay/settings/cardpinreset",
+									"host": [
+										"{{URL}}clicpay"
+									],
+									"path": [
+										"settings",
+										"cardpinreset"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addPrintRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"card_no\":\"\",\n    \"password\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}clicpay/payments/addPrintRequest",
+									"host": [
+										"{{URL}}clicpay"
+									],
+									"path": [
+										"payments",
+										"addPrintRequest"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changecard",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"walletId\": \"\",\n    \"action\": \"\",\n    \"password\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}payments/changecard",
+									"host": [
+										"{{URL}}payments"
+									],
+									"path": [
+										"changecard"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "walletReport",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/fedapi/v3/admin/wallets/UGX",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"fedapi",
+								"v3",
+								"admin",
+								"wallets",
+								"UGX"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbalance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Clientid",
+								"value": "{{Clientid}}",
+								"type": "text"
+							},
+							{
+								"key": "Apikey",
+								"value": "{{Apikey}}",
+								"type": "text"
+							},
+							{
+								"key": "Msisdn",
+								"value": "256705434438",
+								"type": "text"
+							},
+							{
+								"key": "Sessionid",
+								"value": "545454",
+								"type": "text"
+							},
+							{
+								"key": "Basetoken",
+								"value": "UGX",
+								"type": "text"
+							},
+							{
+								"key": "Signature",
+								"value": "1066ed29096271fcf35a185b7cbfc211e144930b7e9e7ec4b3ed1a447643e420d312bf9302d617d2ca98abd02ddb5ac69a864e3d48a695b42a80fe7c06ace6fd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}exchange/payments/getbalance?username=0787719618&currency=UGX",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"getbalance"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "0787719618"
+								},
+								{
+									"key": "currency",
+									"value": "UGX"
+								}
+							]
+						},
+						"description": "Get balance, to get all token balances set all to true, to get only for Basetoken set to false"
+					},
+					"response": [
+						{
+							"name": "getbalance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Clientid",
+										"value": "{{Clientid}}",
+										"type": "text"
+									},
+									{
+										"key": "Apikey",
+										"value": "{{Apikey}}",
+										"type": "text"
+									},
+									{
+										"key": "Msisdn",
+										"value": "256787719618",
+										"type": "text"
+									},
+									{
+										"key": "Sessionid",
+										"value": "545454",
+										"type": "text"
+									},
+									{
+										"key": "Basetoken",
+										"value": "UGX",
+										"type": "text"
+									},
+									{
+										"key": "Signature",
+										"value": "e15b27a5e0dbc935bc3dcddef0822dc90f4f9d166d23c088ee9584ba440f57b047d6f762027ac1e19ee0a08e83c632259e056de1b2f3bf524dc6bd1ce0079b78",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"username\":\"0705434438\",\r\n\"all\":false,\r\n\"operation\":\"acc_balance\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{THIRDPARTY}}",
+									"host": [
+										"{{THIRDPARTY}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 20 May 2020 06:49:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"status\":100,\"balance\":\"2010.0000000\",\"token\":\"UGX\"}"
+						}
+					]
+				},
+				{
+					"name": "statement",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://clic.world/fedapi/v3/users/txstatement?username=0787719618",
+							"protocol": "https",
+							"host": [
+								"clic",
+								"world"
+							],
+							"path": [
+								"fedapi",
+								"v3",
+								"users",
+								"txstatement"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "0787719618"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbankingAccounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}v3/users/getbankingAccounts/256787719618",
+							"host": [
+								"{{URL}}v3"
+							],
+							"path": [
+								"users",
+								"getbankingAccounts",
+								"256787719618"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trustline",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"0705434438\",\r\n    \"password\": \"00000\",\r\n    \"asset\": \"UGX\",\r\n    \"asset_issuer\": \"GAH6O4IN7BHD3E5QTJQ5UESSD4ZN2CQFDGP4VI4H4NRPGYQYC7FLAGJJ\",\r\n    \"operation\": \"ADD\",\r\n    \"account\": \"WALLET\",\r\n    \"signature\":\"signature\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}clicpay/v2/transfer/trustline\n",
+							"host": [
+								"{{URL}}clicpay"
+							],
+							"path": [
+								"v2",
+								"transfer",
+								"trustline\n"
+							]
+						},
+						"description": "Operation is ADD or Remove\r\nSignature = hash512(username+asset+issuer+operation)\r\naccount: WALLET or VAULT"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCurrency",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currency\": \"UGX\",\r\n    \"userid\": \"256752916084\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v3/users/updatecurrency",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"users",
+								"updatecurrency"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer Operation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sending_amount\": \"sending_amount\",\r\n    \"sending_asset\": \"sending_asset\",\r\n    \"sending_asset_issuer\": \"sending_asset_issuer\",\r\n    \"receivable_asset\": \"receivable_asset\",\r\n    \"receivable_asset_issuer\": \"receivable_asset_issuer\",\r\n    \"receivable_amount\": \"receivable_amount\",\r\n    \"destination\": \"srecepient\",\r\n    \"username\": \"username\",\r\n    \"password\": \"password\",\r\n    \"reason\": \"reason\",\r\n    \"signature\": \"signature\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}clicpay/transfer/transfer",
+							"host": [
+								"{{URL}}clicpay"
+							],
+							"path": [
+								"transfer",
+								"transfer"
+							]
+						},
+						"description": "$dataToSign =$data['sending_amount'].$data['sending_asset'].$data['sending_asset_issuer'].$data['receivable_asset'].FED_KEY\r\n\r\n\r\n\r\n\r\n\r\n\r\nsignature  = base64_encode($hs);"
+					},
+					"response": []
+				},
+				{
+					"name": "verifymm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\":\"256787719618\",\n    \"currency\":\"UGX\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://clic.world/fedapi/v4/v1/get_mm_name",
+							"protocol": "https",
+							"host": [
+								"clic",
+								"world"
+							],
+							"path": [
+								"fedapi",
+								"v4",
+								"v1",
+								"get_mm_name"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "verifymm",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "256787719618",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://clic.world/fedapi/v3/v1/get_mm_name",
+									"protocol": "https",
+									"host": [
+										"clic",
+										"world"
+									],
+									"path": [
+										"fedapi",
+										"v3",
+										"v1",
+										"get_mm_name"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 20 Aug 2021 09:03:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "\n\n\n {\"full_name\":\"Mbonye Emmanuel\",\"first_name\":\"Mbonye\",\"last_name\":\"Emmanuel\"}"
+						}
+					]
+				},
+				{
+					"name": "sendsms",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "full_name",
+									"value": "Mbonye Emmanuel",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Mbonye",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Emmanuel",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://clic.world/fedapi/v3/v1/get_mm_name",
+							"protocol": "https",
+							"host": [
+								"clic",
+								"world"
+							],
+							"path": [
+								"fedapi",
+								"v3",
+								"v1",
+								"get_mm_name"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "verifymm",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "256787719618",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://clic.world/fedapi/v3/v1/get_mm_name",
+									"protocol": "https",
+									"host": [
+										"clic",
+										"world"
+									],
+									"path": [
+										"fedapi",
+										"v3",
+										"v1",
+										"get_mm_name"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 20 Aug 2021 09:03:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "\n\n\n {\"full_name\":\"Mbonye Emmanuel\",\"first_name\":\"Mbonye\",\"last_name\":\"Emmanuel\"}"
+						}
+					]
+				},
+				{
+					"name": "SendRequest",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "954WqYCLLvlBY144cjWcL28PnY2MHakYzCZQriKu",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "954WqYCLLvlBY144cjWcL28PnY2MHakYzCZQriKu",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth",
+								"value": "954WqYCLLvlBY144cjWcL28PnY2MHakYzCZQriKu",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\": \"123-223-22982-122\",\n    \"currency\": \"EUR\",\n    \"amount\": 100.22\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sandbox.api.gateway.greymore.partners/api/v1/payment-request",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"api",
+								"gateway",
+								"greymore",
+								"partners"
+							],
+							"path": [
+								"api",
+								"v1",
+								"payment-request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PaymentMethods",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/payments/provider?type=deposit&currency=UGX",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"provider"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "deposit"
+								},
+								{
+									"key": "currency",
+									"value": "UGX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paymentTypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/payments/paymentTypes",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"paymentTypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validateBankAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bankId\": \"10014\",\n    \"accountNumber\":\"0787719618\",\n    \"service_code\":\"MOBILE_MONEY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/exchange/verifybankAccount",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"exchange",
+								"verifybankAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSecureKey",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8006/payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"destination\": \"GCIF46GITEPRKX6D4C74CVMK33KC5AZDCOZWA264RXIWJZQYLMLAQ4U3\",\n    \"source\": \"\",\n    \"destinationPvKey\": \"\",\n    \"amount\": \"100\",\n    \"asset_code\": \"KES\",\n    \"asset_issuer\": \"\",\n    \"memo\":\"h\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8006/payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateWallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"emma\",\n    \"label\":\"Eliana\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/fedapi/v3/users/CreateWallet",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"fedapi",
+								"v3",
+								"users",
+								"CreateWallet"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoint for wallet endpoints"
+		},
+		{
+			"name": "ussd",
+			"item": [
+				{
+					"name": "Interactive",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authentication",
+								"value": "CLICTESTAPI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"msisdn\": \"254742846586\",\n    \"sessionId\": \"12345678\",\n    \"text\": \"\",\n    \"countryCode\": 254,\n    \"network\": \"Safaricom KE\",\n    \"level\":1,\n    \"code\": \"\",\n    \"input\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.clicstage.xyz/ussd/webhook",
+							"protocol": "http",
+							"host": [
+								"api",
+								"clicstage",
+								"xyz"
+							],
+							"path": [
+								"ussd",
+								"webhook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InteractiveUganda",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authentication",
+								"value": "CLICTESTAPI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phoneNumber",
+									"value": "+256787719618",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "7*2*2*1",
+									"type": "text"
+								},
+								{
+									"key": "sessionId",
+									"value": "8900",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3005/ug-webhook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"ug-webhook"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "USSD Operations"
+		},
+		{
+			"name": "pca",
+			"item": [
+				{
+					"name": "getvault",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}fedapi/v4/pca/getvaultaccount/0787719618",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v4",
+								"pca",
+								"getvaultaccount",
+								"0787719618"
+							]
+						},
+						"description": "Get My PCA Signers"
+					},
+					"response": []
+				},
+				{
+					"name": "createvault",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"704243736\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}v4/pca/createvault",
+							"host": [
+								"{{URL}}v4"
+							],
+							"path": [
+								"pca",
+								"createvault"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addsigner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"256787719618\",\r\n    \"password\": \"3232\",\r\n    \"signer_username\": \"256752916084\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}v4/pca/addsigner",
+							"host": [
+								"{{URL}}v4"
+							],
+							"path": [
+								"pca",
+								"addsigner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getrequests",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v3/pca/getrequests/256752916084",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"pca",
+								"getrequests",
+								"256752916084"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signrequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"256787719618\",\r\n    \"password\":\"d8989\",\r\n    \"signature\":\"d8989d8989d8989d8989d8989d8989\",\r\n    \"request_id\":\"5fae38f16620e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v3/pca/signrequest",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"pca",
+								"signrequest"
+							]
+						},
+						"description": "signature = hash256(username+request_id+FED_KEY)"
+					},
+					"response": []
+				},
+				{
+					"name": "getsigners",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}v4/pca/getsigners/0787719618",
+							"host": [
+								"{{URL}}v4"
+							],
+							"path": [
+								"pca",
+								"getsigners",
+								"0787719618"
+							]
+						},
+						"description": "Get My PCA Signers"
+					},
+					"response": []
+				},
+				{
+					"name": "getsignees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}v4/pca/getsignees/0787719618",
+							"host": [
+								"{{URL}}v4"
+							],
+							"path": [
+								"pca",
+								"getsignees",
+								"0787719618"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removesigner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"256787719618\",\r\n    \"password\": \"256787719618\",\r\n    \"signature\": \"\",\r\n    \"signer_username\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v3/pca/removesigner",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"pca",
+								"removesigner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "initiaterequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"704243736\",\r\n    \"password\":\"e7042ac7d09c7bc41c8cfa5749e41858f6980643bc0db1a83cc793d3e24d3f77\",\r\n    \"signature\":\"44343\",\r\n    \"assettype\":\"UGX\",\r\n    \"amount\":\"100\",\r\n    \"asset_issuer\":\"GANDGDF7ZHF7RVXMI53PUSCMVWEFANGTZ4RLEH2DGPDFI5BGWYOLAXRR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}v4/pca/initiaterequest",
+							"host": [
+								"{{URL}}v4"
+							],
+							"path": [
+								"pca",
+								"initiaterequest"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints for the PCA signers"
+		},
+		{
+			"name": "billers",
+			"item": [
+				{
+					"name": "insurance",
+					"item": [
+						{
+							"name": "addItem",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Welfare\",\n    \"description\": \"This product is for MAMAs, the minimm us 2 members\",\n    \"amount\": \"\",\n    \"id\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/admin/saveInsuranceProduct",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"admin",
+										"saveInsuranceProduct"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editItem",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Welfare\",\n    \"description\": \"This product is for MAMAs, the minimm us 2 members\",\n    \"amount\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/admin/editInsuranceProduct",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"admin",
+										"editInsuranceProduct"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getInsuranceItems",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}exchange/admin/getInsuranceItems",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"admin",
+										"getInsuranceItems"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "validateClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paycode\": \"1902383\",\n    \"customerid\": \"01181019079076\",\n    \"signature\": \"e81ctiortra011Re81cti0Re81ceTra011Re81cti019shnse81caonf079cti076e81cti\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://clicpay.co/isw_ug/merchant/verifycustomer",
+							"protocol": "https",
+							"host": [
+								"clicpay",
+								"co"
+							],
+							"path": [
+								"isw_ug",
+								"merchant",
+								"verifycustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBillers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/payments/getbiller?category=4&currency=KES",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"getbiller"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "4"
+								},
+								{
+									"key": "currency",
+									"value": "KES"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "billerproducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/payments/getproductdetails&billerid=10",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"getproductdetails&billerid=10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loadview",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/payments/billerView/:biller_id/:pay_code?billername=10",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"billerView",
+								":biller_id",
+								":pay_code"
+							],
+							"query": [
+								{
+									"key": "billername",
+									"value": "10"
+								}
+							],
+							"variable": [
+								{
+									"key": "biller_id",
+									"value": "10"
+								},
+								{
+									"key": "pay_code",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getcategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/payments/services?currency=KES&app=wallet&app_id=5&version=10",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"services"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "KES"
+								},
+								{
+									"key": "app",
+									"value": "wallet"
+								},
+								{
+									"key": "app_id",
+									"value": "5"
+								},
+								{
+									"key": "version",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "initiliseBillers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/payments/initiliseBillers?currency=UGX&app=wallet&app_id=5&version=10",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"initiliseBillers"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "UGX"
+								},
+								{
+									"key": "app",
+									"value": "wallet"
+								},
+								{
+									"key": "app_id",
+									"value": "5"
+								},
+								{
+									"key": "version",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vault",
+			"item": [
+				{
+					"name": "createTrustline",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "GetQRStringKCB",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "JD6OD5G27E06FXQHMDTOWN4CGWOOIUE6ITZETTMN4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"request_id\": \"456798991232\",\n    \"merchant_account\": \"0800047801\",\n    \"amount\": \"15\",\n    \"currency\": \"KES\",\n    \"callback_url\": \"https://clic.world/api\",\n    \"redirect_url\": \"bava\",\n    \"display_name\": \"\",\n    \"details\": \"The clients best interes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/payments/generateInvoice",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"generateInvoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPaymentLinks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/v3/payments/paymentLinks/0771289654",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"v3",
+								"payments",
+								"paymentLinks",
+								"0771289654"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addPaymentLink",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"0787719618\",\n  \"amount\": \"400\",\n  \"asset\": \"KES\",\n  \"asset_issuer\": \"10\",\n  \"link_type\": \"permanent\",\n  \"status\": \"active\"\n  }"
+						},
+						"url": {
+							"raw": "{{URL}}exchange/payments/addPaymentLink",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"addPaymentLink"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editPaymentLink",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "Content-Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"invoice_id\": \"updated-invoice-id\",\n  \"username\": \"updated-username\",\n  \"amount\": \"updated-amount\",\n  \"asset\": \"updated-asset\",\n  \"asset_issuer\": \"updated-asset-issuer\",\n  \"link_type\": \"multiple\",\n  \"status\": \"updated-status\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/exchange/v3/payments/editPaymentLink",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchange",
+								"v3",
+								"payments",
+								"editPaymentLink"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removePaymentLink",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"some-id\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/exchange/v3/payments/removePaymentLink",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"exchange",
+								"v3",
+								"payments",
+								"removePaymentLink"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tillNo\": 1,\n    \"op_type\": \"split\",\n    \"request_id\": \"646829531B12572287FEBD36F1820D00\",\n    \"merchant_account\": \"159038177043\",\n    \"amount\": \"513500\",\n    \"currency\": \"UGX\",\n    \"details\": \"Order 646829531B12572287FEBD36F1820D00\",\n    \"callback_url\": \"https:\\/\\/clicworld.app\\/clicpay\\/pay\",\n    \"redirect_url\": \"bava\",\n    \"display_name\": \"\",\n    \"memo\": \" Dish Rack - Silver 2 Layers\",\n    \"merchants\": [{\n        \"amount\": \"513500\",\n        \"currency\": \"UGX\",\n        \"username\": \"159038177043\"\n    }],\n    \"signature\": \"9ad12450f5c137f2fc903fe866501121c4e3125f89fc3c51e82daca25da6d888\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.clicworld.app/exchange/payments/generateInvoice",
+							"protocol": "https",
+							"host": [
+								"api",
+								"clicworld",
+								"app"
+							],
+							"path": [
+								"exchange",
+								"payments",
+								"generateInvoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createmerchant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": 100,\r\n    \"pos_account\": \"256712368361\",\r\n    \"message\": \"created successfully\",\r\n    \"api_key\": \"b16280edfb8c36b2d5881a7b09458612a7942269\",\r\n    \"response\": 1,\r\n    \"public_key\": \"GBAQU2XTXGW3GLNALRTRYIMSYSZ6UC33RFWLTMJ25FI4G24PUKMVUEUR\",\r\n    \"clic_username\": \"256712368361\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/payments/createthirdpartymerchant/",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"createthirdpartymerchant",
+								""
+							]
+						},
+						"description": "link_wallet, set to true to link an existing clic username to a merchant account. is_accepted_token, Boolean. set to true if the accepted currency by a merchant is a stellar token. If set to false, saccoid,account number must not be null or empty.If set to true, an issuer account has to attached to the request.\nclic_username, is the username of the account creating the merchant account.access_key is required, this is preshared.\nsignature is a generated with this formulae: hash('sha256',access_key.merchant_name.merchant_id.clic_username). merchant_name must be uniq for every merchant, this is used to generate a clic_username for merchant eg. Emma Ltd is generated as emma.ltd*clic.world which must be unique"
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"access_key\": \"a67c150611d8aacf84c23ff1e7a\",\r\n    \"signature\": \"1d3f80d3b690a1bfa0d54a24ea6a6a31e3966ce373de264febfeeb1c31bfb7f4\",\r\n    \"sacco_id\": 0,\r\n    \"account_type\": \"business\",\r\n    \"shop_id\": \"01690496500\",\r\n    \"merchant_id\": \"1496All1690\",\r\n    \"merchant_name\": \"Admin 149 All Teescripts LTD\",\r\n    \"merchant_phone\": \"256712368361\",\r\n    \"email\": \"tee@gmail.com\",\r\n    \"clic_username\": \"256787719618\",\r\n    \"url\": \"http:\\/\\/localhost\\/CLIC\\/MAIN\\/Nodes\\/live\\/main\\/\",\r\n    \"trading_currency\": \"UGX\",\r\n    \"currency\": \"UGX\",\r\n    \"accepted_currency\": \"UGX\",\r\n    \"asset_code\": \"UGX\",\r\n    \"is_accepted_token\": true,\r\n    \"merchant_type\": \"T002\",\r\n    \"sacco_account_number\": 0,\r\n    \"link_wallet\": false,\r\n    \"tether_issuer\": \"GAH6O4IN7BHD3E5QTJQ5UESSD4ZN2CQFDGP4VI4H4NRPGYQYC7FLAGJJ\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://clicmonkey.xyz/clicpay/merchant/createthirdpartymerchant/",
+									"protocol": "https",
+									"host": [
+										"clicmonkey",
+										"xyz"
+									],
+									"path": [
+										"clicpay",
+										"merchant",
+										"createthirdpartymerchant",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 26 May 2023 10:50:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000; includeSubDomains"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src https:; font-src https: data:; img-src https: data:; script-src https:; style-src https:;"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Feature-Policy",
+									"value": "geolocation 'self'; vibrate 'none'"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "geolocation=self"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"status\":403,\"message\":\"Creating account not found\"}"
+						}
+					]
+				},
+				{
+					"name": "ValidateTransaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"client_trans_id\": 109000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}wallet/validateExample",
+							"host": [
+								"{{URL}}wallet"
+							],
+							"path": [
+								"validateExample"
+							]
+						},
+						"description": "This is s standard request that must be implemented on the clients system. The client must provide an endpoint that allows the request below and responds with the example response below. Id the transaction fails, the client system MUST respond with a different status code and message. Any other status code will fail the transaction."
+					},
+					"response": [
+						{
+							"name": "ValidateTransaction",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"client_trans_id\":109000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}wallet/validateExample",
+									"host": [
+										"{{URL}}wallet"
+									],
+									"path": [
+										"validateExample"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 01 Jul 2022 13:27:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 100,\n    \"message\": \"successfull\",\n    \"trans_id\": 109000,\n    \"amount\": 5000,\n    \"currency\": \"UGX\",\n    \"service_account\": 10029001\n}"
+						}
+					]
+				},
+				{
+					"name": "Deposit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paymode\": \"bank_to_wallet\",\n    \"clic_username\": \"256704243736\",\n    \"client_tnx_id\": \"21123192\",\n    \"request_id\": \"21123192\",\n    \"bankid\": \"1001\",\n    \"currency\": \"EURO\",\n    \"amount\": \"10000\",\n    \"serviceaccount\": \"10011\",\n    \"ipn_url\": \"YOUR IPN URL\",\n    \"signature\": \"NTU0MzJkOTVkMzJjZTUyNDE4ZDQxMDY5M2I1MWM2YjlhMTZhMGI4MWNlYzIzZjA2ODU5OTY0MGFhYjgyZTJiOQ==\",\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}wallet/deposit",
+							"host": [
+								"{{URL}}wallet"
+							],
+							"path": [
+								"deposit"
+							]
+						},
+						"description": "This operation allows a third-party who is receiving credit on behalf of clic.world to credit a clic users wallet.\n\nThe operation involves two steps, the first step is the request initiated by the third-party client and then an ipn_url call back which clic.world system uses to validate the transaction.\n\nBelow is an example request"
+					},
+					"response": []
+				},
+				{
+					"name": "makepayment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}clicpay/merchant/getCahAgents",
+							"host": [
+								"{{URL}}clicpay"
+							],
+							"path": [
+								"merchant",
+								"getCahAgents"
+							]
+						},
+						"description": "The QR code contains a base64 encode with this data. Sample PHP code; $data = $transID.\"\".$amount.\"\".$currency.\"\".$merchant_key.\"\".$companyName.\"\".$memo.\"\".$signature.\"_0\";ClicPayment Endpoint\r\n\r\n$dataToSign = $data['username'].$data['sending_amount'].$data['sending_asset'].$data['asset_issuer'].$data['currency'].$data['api_key'].FED_KEY;\r\n$hs =  hash('sha512',$dataToSign);\r\n$output  = base64_encode($hs);"
+					},
+					"response": []
+				},
+				{
+					"name": "GetCashAgets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GenerateInvoice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transID\": \"4582196A94AD44012B7F599DBE6A9522\",\n    \"api_key\": \"ad23186a773436c3c8afb2a102e5e63ce2910d69\",\n    \"op_type\": \"split\",\n    \"amount\": \"2176\",\n    \"currency\": \"UGX\",\n    \"signature\": \"ee007e7cb0746fe015197048898551cc8680ff6c0f4055d01bc4fdf3a5aa78f3\",\n    \"tillNo\": \"1\",\n    \"memo\": \"URBAN BITES SAMBA SALT & VINEGAR (120G x 16): 2,176.00 (1 x 2,176.00)\",\n    \"merchants\": [\n        {\n            \"username\": \"11594000001\",\n            \"amount\": \"2132.48\",\n            \"currency\": \"UGX\"\n        },\n        {\n            \"username\": \"ad23186a773436c3c8afb2a102e5e63ce2910d69\",\n            \"amount\": 43.52,\n            \"currency\": \"UGX\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/payments/invoice",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MyShops",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/v3/merchant/bussiness/0797719618",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"v3",
+								"merchant",
+								"bussiness",
+								"0797719618"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInvoice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/payments/getinvoiceinfo/192732611a62c473aaaf903ebad10db6",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"getinvoiceinfo",
+								"192732611a62c473aaaf903ebad10db6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transID\": \"d103df3815908d51c275ff437bf0e6f1\",\n    \"merchant_key\": \"01000001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/payments/listner",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"listner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "qrCards",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/admin/qrcards",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"admin",
+								"qrcards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Merchant Details",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-length": true,
+							"connection": true,
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "10023",
+								"value": "API-KEY: JD6OD5G27E06FXQHMDTOWN4CGWOOIUE6ITZETTMN4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.clic.world/clicpay/v3/merchant/getmerchant/01599001",
+							"protocol": "https",
+							"host": [
+								"api",
+								"clic",
+								"world"
+							],
+							"path": [
+								"clicpay",
+								"v3",
+								"merchant",
+								"getmerchant",
+								"01599001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Merchant Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_key\": \"a67c150611d8aacf84c23ff1e7a\",\n    \"signature\": \"866b111afb2534b7ae555523661756266480ce6ea1ef27c8ea9604f6f60e55ae\",\n    \"sacco_id\": 0,\n    \"account_type\": \"business\",\n    \"shop_id\": \"0164600001\",\n    \"merchant_id\": \"1646\",\n    \"merchant_name\": \"NB Holdings\",\n    \"merchant_phone\": \"256778038177\",\n    \"email\": \"teehnry@yahoo.com\",\n    \"clic_username\": \"159038177516\",\n    \"url\": \"https://demo2.clic2go.io/\",\n    \"trading_currency\": \"UGX\",\n    \"currency\": \"UGX\",\n    \"accepted_currency\": \"UGX\",\n    \"asset_code\": \"UGX\",\n    \"is_accepted_token\": true,\n    \"merchant_type\": \"T002\",\n    \"sacco_account_number\": 0,\n    \"link_wallet\": true,\n    \"tether_issuer\": \"GANDGDF7ZHF7RVXMI53PUSCMVWEFANGTZ4RLEH2DGPDFI5BGWYOLAXRR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.clicstage.xyz/exchange/merchant/createthirdpartymerchant",
+							"protocol": "https",
+							"host": [
+								"api",
+								"clicstage",
+								"xyz"
+							],
+							"path": [
+								"exchange",
+								"merchant",
+								"createthirdpartymerchant"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "messages",
+			"item": [
+				{
+					"name": "GetMessages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/getMessages",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"getMessages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editMessage",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "Content-Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"some-id\",\n  \"app_id\": \"some-app-id\",\n  \"payment_method\": \"some-method\",\n  \"title\": \"some-title\",\n  \"channel\": \"SMS\",\n  \"tx_sender_message\":\"\",\n  \"tx_receiver_message\":\"\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/editMessage",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"editMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "Content-Type",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"app_id\": \"some-app-id\",\n  \"payment_method\": \"some-method\",\n  \"title\": \"some-title\",\n  \"channel\": \"SMS\",\n  \"tx_sender_message\":\"\",\n  \"tx_receiver_message\":\"\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/addMessage",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"addMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeMessage",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"some-id\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/removeMessage",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"removeMessage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bulk Transfers",
+			"item": [
+				{
+					"name": "Get Bulk Transfer by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/v3/payments/getBulkTransfer/6511579d170f0",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"v3",
+								"payments",
+								"getBulkTransfer",
+								"6511579d170f0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMyBulkTransfer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}exchange/v3/payments/getUserTransfers/0787719618",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"v3",
+								"payments",
+								"getUserTransfers",
+								"0787719618"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Bulk Transfer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transfer_mode\": \"mobile\",\n    \"payment_method\": \"MPESA\",\n    \"send_asset\": \"UGX\",\n    \"send_amount\": 1000.0,\n    \"list_type\":\"\",\n    \"recipients\": [\n        {\n            \"username\": \"0787719618\",\n            \"amount\": 500\n        },\n        {\n            \"username\": \"0787719618\",\n            \"amount\": 500\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/v3/payments/addBulkTransfer",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"v3",
+								"payments",
+								"addBulkTransfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bulk Transfer by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/v3/payments/removeBulkTransfer/6511508e50d6d",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"v3",
+								"payments",
+								"removeBulkTransfer",
+								"6511508e50d6d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Developer",
+			"item": [
+				{
+					"name": "GetAPIKeys",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"07877196181\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}banking/v3/thirdparty/getAccounts",
+							"host": [
+								"{{URL}}banking"
+							],
+							"path": [
+								"v3",
+								"thirdparty",
+								"getAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditAPIKeys",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": \"651c30f226edb\",\n        \"company_name\": \"New Company\",\n        \"username\": \"07877196181\",\n        \"password\": \"07877196181\",\n        \"app_id\": 12345\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}banking/v3/thirdparty/editAccount",
+							"host": [
+								"{{URL}}banking"
+							],
+							"path": [
+								"v3",
+								"thirdparty",
+								"editAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddAPIKey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"company_name\": \"New Company\",\n    \"app_id\": 12345,\n    \"username\": \"078771961814\",\n    \"password\": \"05532\"\n    }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}banking/v3/thirdparty/addAccount",
+							"host": [
+								"{{URL}}banking"
+							],
+							"path": [
+								"v3",
+								"thirdparty",
+								"addAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAPIKey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"651c30f226edb\",\n    \"username\":\"07877196181\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}banking/v3/thirdparty/removeAccount",
+							"host": [
+								"{{URL}}banking"
+							],
+							"path": [
+								"v3",
+								"thirdparty",
+								"removeAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Approvals",
+			"item": [
+				{
+					"name": "createApprovalrequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"operation_type\": \"BULK_TRANSFER\",\n    \"initiator\": \"109002002\",\n    \"receiver_access_role\": \"APPROVERS\",\n    \"number_of_approvers\": 3,\n    \"reference_id\":\"34344343\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/approval/createApproval",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approval",
+								"createApproval"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retryPayment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transfer_id\": \"BULK_TRANSFER\",\n    \"transId\": \"109002002\",\n    \"pin\": \"109002002\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/payments/retryPayment",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"retryPayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPendingApproval",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"request_id\": \"12345\",\n    \"operation_type\": \"Create\",\n    \"initiator\": \"John Doe\",\n    \"receiver_access_role\": \"Manager\",\n    \"number_of_approvers\": 3\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/approvals/",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approvals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getApprovalById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"request_id\": \"12345\",\n    \"operation_type\": \"Create\",\n    \"initiator\": \"John Doe\",\n    \"receiver_access_role\": \"Manager\",\n    \"number_of_approvers\": 3\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/approval/getApprovalById/65ba4cf114637",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approval",
+								"getApprovalById",
+								"65ba4cf114637"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleOperation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"request_id\": \"12345\",\n    \"operation_type\": \"Create\",\n    \"initiator\": \"John Doe\",\n    \"receiver_access_role\": \"Manager\",\n    \"number_of_approvers\": 3\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/approvals/",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approvals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ApproveAction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"request_id\": \"65ba4cf114637\",\n    \"status\": \"approved\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/approval/updateApproval",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approval",
+								"updateApproval"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"MBONYE EMMANUEL\",\n    \"email\": \"mbonyeemma@gmail.com\",\n    \"phone\": \"0787719618\",\n    \"role\": \"APPROVER\",\n    \"companyId\": \"159766678765143\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/approval/createApprover",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approval",
+								"createApprover"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddRule",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"operation_type\":\"BULK_TRANSFER\",\n    \"approvers\":[\"159719618042\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/approval/addRule",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approval",
+								"addRule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ApproverEdit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"MBONYE EMMANUEL\",\n    \"email\": \"mbonyeemma@gmail.com\",\n    \"phone\": \"0787719618\",\n    \"approver_id\": \"0787719618\",\n    \"role\": \"APPROVER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/approval/editApprover",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approval",
+								"editApprover"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"approver_id\": \"MBONYE EMMANUEL\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/approval/approverResetPassword",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approval",
+								"approverResetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"approver_id\": \"65c5f27c5461a\",\n    \"oldPassword\": \"65c5f79ecddb3\",\n    \"newPassword\": \"emma\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/approval/approverChangePassword",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approval",
+								"approverChangePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRules",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"approver_user_id\":\"256787719618\",\n    \"role\":\"APPROVER\",\n    \"approvable_items\":\"3232\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/approval/getRules",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approval",
+								"getRules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getApprovers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}fedapi/approval/getApprovers",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approval",
+								"getApprovers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "approverLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"mbonyeemma@gmail.com\",\n    \"password\": \"fc7d502f7b832730d76ae5b76959f88df71245946047d4eaa07f9528a7f9a840\",\n    \"app_id\": \"4\",\n    \"device_id\": \"techno\",\n    \"signature\": \"c3c6c3ce8f84dcf5b23d0b1818173f1343beffa992ae0ee02eef9b0c66b77b4c2e51c87f118c3618ace99723c273d2b94ce7c13e8cb700cd71765764d228cfc8\",\n    \"dev_model\": \"modelss\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/users/login",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						},
+						"description": "Signature is calculated as follows:Signature = sha512(dvID+password+model+username+FED_KEY);"
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"device_id\":\"dyzP0N54SpyKutT7hdb1yR:APA91bHJByT7Sd4qXq9uUuKiJ63qCFBlX_jtM-idDjIcq-hsPFzXiFkUfjwjKfBv2uW6i2un-8ZKjZZvLhE0iE2BKQs7pH1jmlgvYANFB6DB98QAgyq27tnHSnjFBVQHiwx8aLqogC1Y\",\"dev_model\":\"TECNO CD7\",\"username\":\"07877196181\",\"password\":\"5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5\",\"pin\":\"5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5\",\"app_id\":\"1\",\"signature\":\"f1000478cd6b1e97289a151200c60ef570805d887fdce6da192f0e4e6ada1d5f5a607d75763dfd5449a6878057e85ccc9c5636a50ea42f183227375e3d786335\"}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://clicmonkey.xyz/fedapi/v3/v1/getuserinfo",
+									"protocol": "http",
+									"host": [
+										"clicmonkey",
+										"xyz"
+									],
+									"path": [
+										"fedapi",
+										"v3",
+										"v1",
+										"getuserinfo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Oct 2020 12:47:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Length",
+									"value": "920"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "\n\n\n {\"success\":1,\"message\":\"Operation successful\",\"public_key\":\"GC5ZZN73YQX6K27KTEOXGUJYDKUAJYCVG7A54VE5DGVD72434PIQYR3K\",\"private_key\":\"DqNi\\/qqIxn7t3T+GuXXIvjNiATq2cpZSlorWSM8i2Sd6o3rdnCJs3V0PXqCJ72Xe3ZthTQUeW6iKWT9IZH3k8g==\",\"fullname\":\"Brian Emmanuel\",\"username\":\"07877196181\",\"telephone\":\"256787719618\",\"device_id\":\"fY_P-ZXFwow:APA91bFbhUyQFDqQ1eTiE_8MfSWG4Va26oAT67tMErcjyZTptr6RsFfr58vm7SFY9TQy6lW5hu_Cy3Qhw9bjKlcwOuJ1X4RwKxcFahFyPbPx0soLL7cflw8zxN8arcmCPInOZC-L4vB9\",\"created_at\":\"2020-02-21 14:01:50\",\"dev_id\":\"\",\"applicant_id\":\"\",\"country\":\"\",\"kycstatus\":\"Approved\",\"invite_code\":\"8989\",\"email\":\"emma@clic.world\",\"app_id\":5,\"saccoid\":1014,\"account_no\":\"256787719618\",\"favorites\":\"\",\"belongs_to_sacco\":\"Yes\",\"instance\":\"1\",\"currency\":\"UGX\",\"config\":\"uganda_config\",\"display_currency\":\"UGX\",\"pwd\":\"NTk5NDQ3MWFiYjAxMTEyYWZjYzE4MTU5ZjZjYzc0YjRmNTExYjk5ODA2ZGE1OWIzY2FmNWE5YzE3M2NhY2ZjNQ==\",\"dp\":\"\",\"version\":null}"
+						}
+					]
+				},
+				{
+					"name": "delereApprover",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}fedapi/approval/deleteApprover/3232",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"approval",
+								"deleteApprover",
+								"3232"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ocr",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://clicstage.xyz:8005/api/v1/ug/upload/",
+							"protocol": "https",
+							"host": [
+								"clicstage",
+								"xyz"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"v1",
+								"ug",
+								"upload",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Insurance",
+			"item": [
+				{
+					"name": "Subscribe",
+					"item": [
+						{
+							"name": "Create Insurance Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product_name\": \"Health Insurance\",\n    \"description\": \"Covers medical expenses\",\n    \"coverage_amount\": 100000.00,\n    \"walletId\":\"1234567\",\n    \"premium\": 5000.00\n}"
+								},
+								"url": {
+									"raw": "{{URL}}exchange/insurance/createInsuranceProduct",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"insurance",
+										"createInsuranceProduct"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Insurance Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}exchange/insurance/getInsuranceProducts",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"insurance",
+										"getInsuranceProducts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Insurance Product By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/Insurance/getInsuranceProductById/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"Insurance",
+										"getInsuranceProductById",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Insurance Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}exchange/insurance/deleteInsuranceProduct/1",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"insurance",
+										"deleteInsuranceProduct",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Insurance Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product_id\": 1,\n    \"product_name\": \"Health Insurance\",\n    \"description\": \"Covers medical expenses\",\n    \"coverage_amount\": 100000.00,\n    \"walletId\":\"1234567\",\n    \"premium\": 5000.00\n}"
+								},
+								"url": {
+									"raw": "{{URL}}exchange/insurance/updateInsuranceProduct",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"insurance",
+										"updateInsuranceProduct"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "claim",
+					"item": [
+						{
+							"name": "Create Claim",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": 1,\n    \"claim_date\": \"2024-06-01\",\n    \"claim_amount\": 10000.00,\n    \"status\": \"pending\"\n}"
+								},
+								"url": {
+									"raw": "{{URL}}exchange/insurance/createClaim",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"insurance",
+										"createClaim"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "approveClaim",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"claim_id\": 1,\n    \"status\": \"approved\",\n    \"reason\": \"\"\n    }"
+								},
+								"url": {
+									"raw": "{{URL}}exchange/insurance/approveClaim",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"insurance",
+										"approveClaim"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Claims",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}exchange/insurance/getClaims",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"insurance",
+										"getClaims"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Claim By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}exchange/insurance/getClaimById/1",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"insurance",
+										"getClaimById",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "Create User Insurance",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": 1,\n    \"product_id\": 1,\n    \"start_date\": \"2024-01-01\",\n    \"end_date\": \"2025-01-01\"\n}"
+								},
+								"url": {
+									"raw": "{{URL}}banking/insurance/createUserInsurance",
+									"host": [
+										"{{URL}}banking"
+									],
+									"path": [
+										"insurance",
+										"createUserInsurance"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Insurances",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}exchange/insurance/getUserInsurances",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"insurance",
+										"getUserInsurances"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getMyCovers",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\":\"159719618042\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/insurance/getUserClaims",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"insurance",
+										"getUserClaims"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserProducts",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\":\"159719618042\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}exchange/insurance/getUserProducts",
+									"host": [
+										"{{URL}}exchange"
+									],
+									"path": [
+										"insurance",
+										"getUserProducts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Insurance By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/Insurance/getUserInsuranceById/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"Insurance",
+										"getUserInsuranceById",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User Insurance",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": 1,\n    \"product_id\": 1,\n    \"start_date\": \"2024-01-01\",\n    \"end_date\": \"2025-01-01\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost/Insurance/updateUserInsurance/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"Insurance",
+										"updateUserInsurance",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User Insurance",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/Insurance/deleteUserInsurance/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"Insurance",
+										"deleteUserInsurance",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"referenceId\":\"1234\",\n    \"username\":\"1234\",\n    \"idDocType\":\"1234\",\n    \"image\":\"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/payments/uploadPOP",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"uploadPOP"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "standingOrders",
+			"item": [
+				{
+					"name": "getStandingOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/settings/getStandingOrders/159719618042",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"settings",
+								"getStandingOrders",
+								"159719618042"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addStandingOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customerName\": \"John Doe\",\n  \"payment_method\": \"service_code_example\",\n  \"user_id\": \"159719619\",\n  \"wallet_id\": \"159719619\",\n  \"send_asset\": \"USD\",\n  \"send_amount\": 1000.50,\n  \"recipient_account\": \"1234567890\",\n  \"bank_code\": \"bank_code_example\",\n  \"ss_type\": \"standing_order\",\n  \"ss_date\": \"2024-10-21\",\n  \"ss_end_date\": \"2024-12-21\",\n  \"password\": \"5e884898da28047151d0e56f8dc6292773603d0d6aabbdd3ef\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}exchange/settings/addStandingOrder",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"settings",
+								"addStandingOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transfer_id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}settings/deactivateStandingOrder",
+							"host": [
+								"{{URL}}settings"
+							],
+							"path": [
+								"deactivateStandingOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ssItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/payments/ssItems",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"ssItems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPaymentItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/payments/paymentItems?method=GROUP_TRANSFER&currency=UGX",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"payments",
+								"paymentItems"
+							],
+							"query": [
+								{
+									"key": "method",
+									"value": "GROUP_TRANSFER"
+								},
+								{
+									"key": "currency",
+									"value": "UGX"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GroupsAPI",
+			"item": [
+				{
+					"name": "group",
+					"item": [
+						{
+							"name": "myGroups",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/myGroups/159719618042",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"myGroups",
+										"159719618042"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pendingRollOver",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/pendingRollOver",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"pendingRollOver"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "groupInfo",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"flag\": true\n}"
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/getGroupById/10073323",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"getGroupById",
+										"10073323"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "groupMembers",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"flag\": true\n}"
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/groupMembers/1001950",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"groupMembers",
+										"1001950"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "closeGroup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\":\"159719618042\",\n    \"group_id\": \"1001950\",\n    \"reason\": \"159719618042\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/close",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"close"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateGroup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\":\"1597196180423\",\n    \"groupName\": \"Sample Group\",\n    \"description\": \"This is a sample group description\",\n    \"groupType\": \"SAVINGS_AND_LOANS\",\n    \"allowWithdrawals\": \"Yes\",\n    \"depositFrequency\": \"Monthly\",\n    \"penalty\": \"10.00\",\n    \"payoutFrequency\": \"Quarterly\",\n    \"memberContribution\": \"50.00\",\n    \"numGuarantors\": \"2\",\n    \"loanDuration\": \"12\",\n    \"interestRate\": \"5.00\",\n    \"penaltyLoan\": \"2.00\",\n    \"loanLimit\": \"1000.00\",\n    \"modeOfPayout\": \"Bank Transfer\",\n    \"sacco_id\": \"12345\",\n    \"endDate\": \"2024-12-31\",\n    \"startDate\": \"2024-01-01\",\n    \"wallet_id\": \"98765\",\n    \"target\": \"5000.00\",\n    \"currency\": \"USD\",\n    \"day\": \"Monday\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/create",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateMemberTransaction",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"group_id\": \"\",\n    \"user_id\":\"\",\n    \"amount\": \"\",\n    \"ref_id\":\"\",\n    \"trans_type\": \"\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/CreateMemberTransaction",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"CreateMemberTransaction"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "requests",
+					"item": [
+						{
+							"name": "ApproveRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"1001001\",\n    \"request_id\": \"100319706159719618042\",\n    \"option\": \"Approved\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/actionRequest",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"actionRequest"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"12345\",\n    \"request_id\": \"req_001\",\n    \"group_id\": \"67890\",\n    \"walletId\": \"wallet_abc\",\n    \"request_type\": \"loan\",\n    \"amount\": 5000,\n    \"meta_data\": \"{\\\"notes\\\": \\\"Urgent request\\\", \\\"priority\\\": \\\"high\\\"}\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/groups/createGroupRequest",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"groups",
+										"createGroupRequest"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "groupRequests",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"159719618042\",\n    \"group_id\": \"1001950\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/groups/requests",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"groups",
+										"requests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateMember",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"group_id\":\"\",\n    \"user_id\":\"\",\n    \"actions\":\"\",\n    \"shares\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/updateMember",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"updateMember"
+									]
+								},
+								"description": "actions is-> shares to edit shares\n\nadmin-> to make admin to revoke admin rights. the system will revoke if the user_id is an admin or make admin if the user is not an admin\n\nremove-> to remove a member"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "loans",
+					"item": [
+						{
+							"name": "Create Loan",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"group_id\": \"1001950\",\n  \"user_id\": \"159719618042\",\n  \"amount\": 20000,\n  \"purpose\": \"Business\",\n  \"ref_id\":\"3232\",\n  \"repayment_period\": 12,\n  \"guarantors\":[\n    {\"amount\":100,\"member_id\":\"159719618042\"}\n  ]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/loans/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"loans",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Loans",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}chamaz/loans/loans/:groupId",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"loans",
+										"loans",
+										":groupId"
+									],
+									"variable": [
+										{
+											"key": "groupId",
+											"value": "100204798"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Loan By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}chamaz/loans/loan/:loanId",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"loans",
+										"loan",
+										":loanId"
+									],
+									"variable": [
+										{
+											"key": "loanId",
+											"value": "10912"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetUserLoans",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\":\"159719618042\",\n    \"group_id\":\"10034431\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/loans/getUserloans",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"loans",
+										"getUserloans"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Loan Transactions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/loans/transactions/:loanId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"loans",
+										"transactions",
+										":loanId"
+									],
+									"variable": [
+										{
+											"key": "loanId",
+											"value": "loan_id"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "approveGurantee",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"loan_id\": \"\",\n    \"status\": \"rejected\",\n    \"user_id\": \"\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/loans/ApproveGuarantor",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"loans",
+										"ApproveGuarantor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Loan Guarantors",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/guarantors/:loanId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"guarantors",
+										":loanId"
+									],
+									"variable": [
+										{
+											"key": "loanId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Approve Loan",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"loanId\": \"103128\",\n  \"clientId\": \"159719618042\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/loans/approve",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"loans",
+										"approve"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Loan Balance",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/loans/balance/:loanId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"loans",
+										"balance",
+										":loanId"
+									],
+									"variable": [
+										{
+											"key": "loanId",
+											"value": "103128"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Interest Balance",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/interest/:loanId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"interest",
+										":loanId"
+									],
+									"variable": [
+										{
+											"key": "loanId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Fines Due",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/fines/:loanId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"fines",
+										":loanId"
+									],
+									"variable": [
+										{
+											"key": "loanId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Loan Statement",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/statement/:loanId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"statement",
+										":loanId"
+									],
+									"variable": [
+										{
+											"key": "loanId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check Loan Eligibility",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/loans/eligibility/:userId/:groupId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"loans",
+										"eligibility",
+										":userId",
+										":groupId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "10912"
+										},
+										{
+											"key": "groupId",
+											"value": "1001950"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "members",
+					"item": [
+						{
+							"name": "joinGroup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\":\"159719618\",\n    \"group_id\": \"1001950\",\n    \"client_id\": \"159719618042\",\n    \"invited_by\": \"159719618042\",\n    \"role\": \"member\",\n    \"shares\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/groups/joinGroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"groups",
+										"joinGroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RemoveMember",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"159719618042\",\n    \"group_id\": \"103451\",\n    \"member_id\": \"159719618042\",\n    \"op_type\": \"exit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/groups/deleteGroupClient",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"groups",
+										"deleteGroupClient"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateMember",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\":\"159719618\",\n    \"group_id\": \"1001950\",\n    \"shares\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/groups/joinGroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"groups",
+										"joinGroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddClient",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"members\": \"[159719618042,159719618042]\", \n  \"user_id\": \"159719618042\", \n  \"client_id\": \"159719618042\", \n  \"group_id\": \"group_id\", \n  \"invited_by\": \"159719618042\", \n  \"role\": \"member\", \n  \"shares\": 1\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}groups/sendInvites",
+									"host": [
+										"{{URL}}groups"
+									],
+									"path": [
+										"sendInvites"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "savings",
+					"item": [
+						{
+							"name": "deposit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ref_id\": \"1001001\",\n    \"group_id\": \"62\",\n    \"user_id\": \"159719618042\",\n    \"amount\":800\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}groups/CreateMemberTransaction",
+									"host": [
+										"{{URL}}groups"
+									],
+									"path": [
+										"CreateMemberTransaction"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "My Statement",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"159719618042\",\n    \"group_id\": \"1001950\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/getMemberStatement",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"getMemberStatement"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "emailGroupStatement",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"savings_account\":\"1008002122\",\n    \"group_id\":\"1008002122\",\n    \"member_id\":\"1008002122\",\n    \"from_date\":\"1008002122\",\n    \"to_date\":\"1008002122\",\n    \"to_email\":\"mbonyeemma@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/emailCSVStatement",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"emailCSVStatement"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "getAllGroups",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}chamaz/admin/allGroups",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"admin",
+										"allGroups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getGroupInfo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}chamaz/admin/getGroupInfo/100309981",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"admin",
+										"getGroupInfo",
+										"100309981"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getGroupMembers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}chamaz/admin/getGroupMembers/100309981",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"admin",
+										"getGroupMembers",
+										"100309981"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "settings",
+					"item": [
+						{
+							"name": "deletegroup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user_id\": \"[userId]\",\n  \"group_id\": \"[group_id]\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/settings/deleteGroup",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"settings",
+										"deleteGroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resetInviteCode",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user_id\": \"[userId]\",\n  \"group_id\": \"[group_id]\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/settings/resetInviteCode",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"settings",
+										"resetInviteCode"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateGroup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"groupName\": \"[groupName]\",\n  \"description\": \"[description]\",\n  \"groupType\": \"[groupType]\",\n  \"allowWithdrawals\": \"[Yes|No]\",\n  \"depositFrequency\": \"[depositFrequency]\",\n  \"penalty\": \"[penalty]\",\n  \"payoutFrequency\": \"[payoutFrequency]\",\n  \"memberContribution\": \"[memberContribution]\",\n  \"numGuarantors\": \"[numGuarantors]\",\n  \"loanDuration\": \"[loanDuration]\",\n  \"interestRate\": \"[interestRate]\",\n  \"penaltyLoan\": \"[penaltyLoan]\",\n  \"loanLimit\": \"[loanLimit]\",\n  \"modeOfPayout\": \"[modeOfPayout]\",\n  \"sacco_id\": \"[sacco_id]\",\n  \"member_id\": \"[member_id]\",\n  \"endDate\": \"[endDate]\",\n  \"startDate\": \"[startDate]\",\n  \"wallet_id\": \"[wallet_id]\",\n  \"target\": \"[target]\",\n  \"currency\": \"[currency]\",\n  \"group_id\": \"[group_id]\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/updateGroup",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"updateGroup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "emailStatement",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"from_date\": \"[startDate]\",\n  \"report_type\": \"[reportType]\",\n  \"to_date\": \"[endDate]\",\n  \"email\": \"[email]\",\n  \"group_id\": \"[group_id]\",\n  \"duration\": \"[duration]\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}chamaz/groups/emailCSVstatement",
+									"host": [
+										"{{URL}}chamaz"
+									],
+									"path": [
+										"groups",
+										"emailCSVstatement"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Invites",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 123,\n    \"instance\": \"example_instance\",\n    \"saccoid\": \"example_saccoid\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/groups/invites",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"groups",
+								"invites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tontine",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sacco_id\": \"example_sacco_id\",\n    \"instance\": \"example_instance\",\n    \"name\": \"example_name\",\n    \"member_id\": \"example_member_id\",\n    \"payout_date\": \"example_payout_date\",\n    \"percentage\": \"example_percentage\",\n    \"member_contribution\": \"example_contribution\",\n    \"deposit_frequency\": \"example_deposit_frequency\",\n    \"payout_frequency\": \"example_payout_frequency\",\n    \"group_type\": \"example_group_type\",\n    \"payment_order\": \"example_payment_order\",\n    \"purpose\": \"example_purpose\",\n    \"description\": \"example_description\",\n    \"group_id\": \"example_group_id\",\n    \"status\": \"example_status\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/groups/updatetontine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"groups",
+								"updatetontine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 123,\n    \"instance\": \"example_instance\",\n    \"saccoid\": \"example_saccoid\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/groups/userdetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"groups",
+								"userdetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AllGroupInvites",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.clic.world/banking/v3/groups/alluserinvites/0787719618",
+							"protocol": "https",
+							"host": [
+								"api",
+								"clic",
+								"world"
+							],
+							"path": [
+								"banking",
+								"v3",
+								"groups",
+								"alluserinvites",
+								"0787719618"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getopenSaccos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}fedapi/v3/v1/getopenSaccos?currency=UGX&app_id=1",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"v3",
+								"v1",
+								"getopenSaccos"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "UGX"
+								},
+								{
+									"key": "app_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetRequests",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"memberid\": \"1001001\",\n    \"groupid\": \"62\",\n    \"saccoid\": \"1001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}chamaz/groups/groupAccountReport/100272360",
+							"host": [
+								"{{URL}}chamaz"
+							],
+							"path": [
+								"groups",
+								"groupAccountReport",
+								"100272360"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "groupTypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}fedapi/group/types?currency=UGX",
+							"host": [
+								"{{URL}}fedapi"
+							],
+							"path": [
+								"group",
+								"types"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "UGX"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "reports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}exchange/reports/recon/UGX",
+							"host": [
+								"{{URL}}exchange"
+							],
+							"path": [
+								"reports",
+								"recon",
+								"UGX"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "groups/fines",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\":\"\",\n    \"group_id\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}chamaz/groups/fines",
+							"host": [
+								"{{URL}}chamaz"
+							],
+							"path": [
+								"groups",
+								"fines"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ISW Intergration",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getSaccos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "API-KEY",
+						"value": "B435D87F32583B83AB0A269145D67C57A7F4DF6CC",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}fedapi/v1/getMemberSacco/159719618042&filer=groups&currency=KES",
+					"host": [
+						"{{URL}}fedapi"
+					],
+					"path": [
+						"v1",
+						"getMemberSacco",
+						"159719618042&filer=groups&currency=KES"
+					]
+				},
+				"description": "The transaction status request can be sent at any time after a deposit transaction\r\nnotification in case a response was not received or to ensure that the transaction status\r\nsimilar to the one sent in the initial response."
+			},
+			"response": []
+		},
+		{
+			"name": "getMemberSacco",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-KEY",
+						"value": "B435D87F32583B83AB0A269145D67C57A7F4DF6CC",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\":\"159719618042\",\n    \"saccoId\":\"1008\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}fedapi/v1/getMemberSacco",
+					"host": [
+						"{{URL}}fedapi"
+					],
+					"path": [
+						"v1",
+						"getMemberSacco"
+					]
+				},
+				"description": "The transaction status request can be sent at any time after a deposit transaction\r\nnotification in case a response was not received or to ensure that the transaction status\r\nsimilar to the one sent in the initial response."
+			},
+			"response": []
+		},
+		{
+			"name": "getMemberSacco Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-KEY",
+						"value": "B435D87F32583B83AB0A269145D67C57A7F4DF6CC",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\":\"159719618042\",\n    \"saccoId\":\"1008\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}fedapi/v1/getMemberSacco",
+					"host": [
+						"{{URL}}fedapi"
+					],
+					"path": [
+						"v1",
+						"getMemberSacco"
+					]
+				},
+				"description": "The transaction status request can be sent at any time after a deposit transaction\r\nnotification in case a response was not received or to ensure that the transaction status\r\nsimilar to the one sent in the initial response."
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjE1OTcxOTYxODA0MiIsInVzZXJfdHlwZSI6ImluZGl2aWR1YWwiLCJ1c2VyX2lkIjoiMTU5NzE5NjE4MDQyIiwiYXBwSWQiOjcsImNvbXBhbnlfaWQiOiIxNTk3MTk2MTgwNDIiLCJpYXQiOjE3NDIxMTMwNDEsImV4cCI6MTc0MjEzNDY0MX0.QLTCNauwbtgTMJ0UIM2cpkpVIKEHXhZ-BzKZPTuAYtc",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://api.clicstage.xyz/"
+		},
+		{
+			"key": "URL",
+			"value": "https://api.clicstage.xyz/"
+		}
+	]
+}

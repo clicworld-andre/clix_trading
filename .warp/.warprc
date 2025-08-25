@@ -1,0 +1,187 @@
+#!/bin/bash
+# .warprc - Shell configuration for CLIX Trading Platform
+# Source this file to enable Warp optimizations: source .warp/.warprc
+
+# Project root
+export CLIX_ROOT="/Users/admin/clix_trading"
+
+# Navigation shortcuts
+cdclix() { cd "$CLIX_ROOT"; }
+cdapp() { cd "$CLIX_ROOT/app"; }
+cdcomponents() { cd "$CLIX_ROOT/components"; }
+cdlc() { cd "$CLIX_ROOT/components/lc"; }
+cdapi() { cd "$CLIX_ROOT/app/api"; }
+cdlib() { cd "$CLIX_ROOT/lib"; }
+cddocs() { cd "$CLIX_ROOT/docs"; }
+
+# Development shortcuts
+alias dev='npm run dev &'
+alias build='npm run build'
+alias start='npm start'
+alias lint='npm run lint'
+alias test-auth='node test-auth-fix.js'
+alias test-wallet='node test-wallet-connection.js'
+alias check-endpoints='bash check-endpoints.sh'
+
+# Server management
+alias server-status='lsof -i :3000'
+alias kill-server='lsof -ti:3000 | xargs kill -9'
+alias restart-server='kill-server && dev'
+
+# Log management
+alias logs='tail -f *.log'
+alias dev-logs='tail -f dev.log'
+alias server-logs='tail -f dev_server.log'
+alias clear-logs='> dev.log && > dev_server.log && > clix-trading.log'
+
+# Git shortcuts
+alias gs='git status --short'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push origin main'
+alias gl='git pull origin main'
+alias glog='git log --oneline -10'
+
+# File shortcuts
+alias ll='ls -la'
+alias clean-cache='rm -rf .next node_modules/.cache'
+alias install='npm install'
+alias update='npm update'
+
+# LC Development shortcuts
+lc-create() {
+    echo "Opening LC creation panel..."
+    open "$CLIX_ROOT/components/lc/lc-creation-panel.tsx"
+}
+
+lc-dashboard() {
+    echo "Opening LC dashboard..."
+    open "$CLIX_ROOT/components/lc/lc-dashboard.tsx"
+}
+
+lc-api() {
+    echo "LC API routes:"
+    ls -la "$CLIX_ROOT/app/api/lc/"
+}
+
+# Matrix development shortcuts
+matrix-client() {
+    open "$CLIX_ROOT/lib/matrix-client.ts"
+}
+
+matrix-chat() {
+    open "$CLIX_ROOT/components/modern-chat-view.tsx"
+}
+
+# Stellar development shortcuts
+stellar-service() {
+    open "$CLIX_ROOT/lib/stellar-trading.ts"
+}
+
+stellar-api() {
+    echo "Stellar API routes:"
+    ls -la "$CLIX_ROOT/app/api/stellar/"
+}
+
+# Quick testing functions
+test-all() {
+    echo "Running comprehensive tests..."
+    npm run lint
+    node test-auth-fix.js
+    node test-wallet-connection.js
+    bash check-endpoints.sh
+    echo "All tests completed."
+}
+
+# Development workflow functions
+daily-setup() {
+    echo "🚀 Starting daily development setup..."
+    cd "$CLIX_ROOT"
+    git status --short
+    git pull origin main
+    npm install
+    npm run dev &
+    sleep 5
+    curl -f http://localhost:3000 >/dev/null 2>&1 && echo "✅ Dev server ready at http://localhost:3000" || echo "❌ Server not ready"
+}
+
+emergency-restart() {
+    echo "🔄 Emergency restart..."
+    pkill -f node 2>/dev/null || true
+    lsof -ti:3000 | xargs kill -9 2>/dev/null || true
+    rm -rf .next node_modules/.cache
+    npm install
+    npm run dev &
+    sleep 10
+    curl -f http://localhost:3000 >/dev/null 2>&1 && echo "✅ Server restarted successfully" || echo "❌ Restart failed"
+}
+
+# Environment switching
+set-env() {
+    case $1 in
+        dev|development)
+            export NODE_ENV=development
+            export NEXT_PUBLIC_ENV=development
+            echo "🛠️ Environment set to development"
+            ;;
+        staging)
+            export NODE_ENV=staging
+            export NEXT_PUBLIC_ENV=staging
+            echo "🧪 Environment set to staging"
+            ;;
+        prod|production)
+            export NODE_ENV=production
+            export NEXT_PUBLIC_ENV=production
+            echo "🚀 Environment set to production"
+            ;;
+        *)
+            echo "Usage: set-env [dev|staging|prod]"
+            ;;
+    esac
+}
+
+# Quick help function
+clix-help() {
+    echo ""
+    echo "🎯 CLIX Trading Platform - Warp Shortcuts"
+    echo "==========================================="
+    echo ""
+    echo "📂 Navigation:"
+    echo "  cdclix        - Go to project root"
+    echo "  cdapp         - Go to app directory"
+    echo "  cdcomponents  - Go to components"
+    echo "  cdlc          - Go to LC components"
+    echo "  cdapi         - Go to API routes"
+    echo ""
+    echo "🚀 Development:"
+    echo "  dev           - Start dev server in background"
+    echo "  build         - Build for production"
+    echo "  test-all      - Run all tests"
+    echo "  daily-setup   - Complete daily setup"
+    echo ""
+    echo "🔧 Server Management:"
+    echo "  server-status - Check server status"
+    echo "  restart-server- Restart development server"
+    echo "  emergency-restart - Full restart with cleanup"
+    echo ""
+    echo "📋 LC Development:"
+    echo "  lc-create     - Open LC creation component"
+    echo "  lc-dashboard  - Open LC dashboard"
+    echo "  lc-api        - List LC API routes"
+    echo ""
+    echo "📊 Logs:"
+    echo "  logs          - Tail all logs"
+    echo "  dev-logs      - Tail dev logs only"
+    echo "  clear-logs    - Clear all log files"
+    echo ""
+    echo "For detailed help, see: .warp/shortcuts.md"
+    echo ""
+}
+
+# Welcome message
+echo "✅ CLIX Trading Platform Warp optimizations loaded!"
+echo "💡 Type 'clix-help' for available shortcuts"
+echo "🚀 Dev server should be running at http://localhost:3000"
+
+# Set initial environment
+set-env development

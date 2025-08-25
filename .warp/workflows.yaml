@@ -1,0 +1,339 @@
+# CLIX Trading Platform - Development Workflows
+# Automated workflows for common development tasks
+
+# Development Workflows
+workflows:
+  
+  # Daily Development Workflow
+  daily_dev:
+    name: "Daily Development Setup"
+    description: "Complete setup for daily development work"
+    steps:
+      - name: "Navigate to project"
+        command: "cd /Users/admin/clix_trading"
+        
+      - name: "Check git status"
+        command: "git status --short"
+        
+      - name: "Pull latest changes"
+        command: "git pull origin main"
+        
+      - name: "Install dependencies"
+        command: "npm install"
+        condition: "package.json modified"
+        
+      - name: "Start dev server"
+        command: "npm run dev &"
+        description: "Start on port 3000 in background"
+        
+      - name: "Wait for server"
+        command: "sleep 5"
+        
+      - name: "Verify server"
+        command: "curl -f http://localhost:3000 >/dev/null && echo 'Dev server ready' || echo 'Server not ready'"
+        
+      - name: "Show available shortcuts"
+        command: "echo 'Dev server running on http://localhost:3000'"
+        
+  # Build & Test Workflow
+  build_test:
+    name: "Build and Test"
+    description: "Complete build and testing workflow"
+    steps:
+      - name: "Clean build cache"
+        command: "rm -rf .next node_modules/.cache"
+        
+      - name: "Install dependencies"
+        command: "npm install"
+        
+      - name: "Run linting"
+        command: "npm run lint"
+        
+      - name: "Build for production"
+        command: "npm run build"
+        
+      - name: "Test authentication"
+        command: "node test-auth-fix.js"
+        
+      - name: "Test wallet connection"
+        command: "node test-wallet-connection.js"
+        
+      - name: "Check API endpoints"
+        command: "bash check-endpoints.sh"
+        
+      - name: "Test Matrix signin"
+        command: "node test-signin.js"
+        
+  # LC Development Workflow
+  lc_development:
+    name: "Letter of Credit Development"
+    description: "Workflow for LC feature development"
+    steps:
+      - name: "Navigate to LC components"
+        command: "cd components/lc/"
+        
+      - name: "List LC components"
+        command: "ls -la *.tsx"
+        
+      - name: "Check LC API routes"
+        command: "ls -la ../../app/api/lc/"
+        
+      - name: "View LC types"
+        command: "cat ../../lib/lc/types.ts | head -20"
+        
+      - name: "Test LC endpoints"
+        command: "curl -X GET http://localhost:3000/api/lc/list"
+        
+  # Deployment Preparation
+  deploy_prep:
+    name: "Deployment Preparation"
+    description: "Prepare application for deployment"
+    steps:
+      - name: "Check git status"
+        command: "git status"
+        
+      - name: "Run full test suite"
+        workflow: "build_test"
+        
+      - name: "Build production"
+        command: "npm run build"
+        
+      - name: "Start production server"
+        command: "npm start &"
+        
+      - name: "Test production build"
+        command: "sleep 10 && curl -f http://localhost:3000"
+        
+      - name: "Stop production server"
+        command: "lsof -ti:3000 | xargs kill -9"
+        
+  # Database & Storage Setup
+  storage_setup:
+    name: "Storage Setup"
+    description: "Initialize storage and database"
+    steps:
+      - name: "Check for database files"
+        command: "find . -name '*.db' -o -name '*.sqlite*'"
+        
+      - name: "Create storage directories"
+        command: "mkdir -p storage/{documents,uploads,temp}"
+        
+      - name: "Set permissions"
+        command: "chmod 755 storage/"
+        
+  # Stellar Integration Workflow
+  stellar_integration:
+    name: "Stellar Integration Testing"
+    description: "Test Stellar blockchain integration"
+    steps:
+      - name: "Check Stellar service"
+        command: "cat lib/stellar-trading.ts | grep -A 5 -B 5 'export'"
+        
+      - name: "Test Stellar API routes"
+        command: "ls -la app/api/stellar/"
+        
+      - name: "Test get tokens endpoint"
+        command: "curl http://localhost:3000/api/stellar/getTokens"
+        
+      - name: "Test get keys endpoint"
+        command: "curl http://localhost:3000/api/stellar/getKeys"
+        
+  # Matrix Protocol Testing
+  matrix_testing:
+    name: "Matrix Protocol Testing"
+    description: "Test Matrix integration and chat features"
+    steps:
+      - name: "Check Matrix client"
+        command: "cat lib/matrix-client.ts | head -20"
+        
+      - name: "Test Matrix utilities"
+        command: "node debug-matrix-calls.js"
+        
+      - name: "Check chat components"
+        command: "ls -la components/*chat* components/*matrix*"
+        
+  # Code Quality Workflow
+  code_quality:
+    name: "Code Quality Check"
+    description: "Comprehensive code quality analysis"
+    steps:
+      - name: "TypeScript compilation check"
+        command: "npx tsc --noEmit"
+        
+      - name: "ESLint check"
+        command: "npm run lint"
+        
+      - name: "Check for unused imports"
+        command: "grep -r 'import.*from' --include='*.tsx' --include='*.ts' . | grep -v node_modules | head -10"
+        
+      - name: "Check bundle size"
+        command: "npm run build && du -sh .next/"
+        
+      - name: "Security audit"
+        command: "npm audit"
+        
+  # Performance Analysis
+  performance_analysis:
+    name: "Performance Analysis"
+    description: "Analyze application performance"
+    steps:
+      - name: "Build time analysis"
+        command: "time npm run build"
+        
+      - name: "Bundle size analysis"
+        command: "du -sh .next/static/chunks/*"
+        
+      - name: "Memory usage check"
+        command: "ps aux | grep -E '(next|node)' | grep -v grep"
+        
+      - name: "Port usage check"
+        command: "lsof -i :3000"
+        
+  # Documentation Update
+  docs_update:
+    name: "Documentation Update"
+    description: "Update project documentation"
+    steps:
+      - name: "Check documentation status"
+        command: "ls -la docs/"
+        
+      - name: "Update README"
+        command: "echo 'Review docs/README.md for updates'"
+        
+      - name: "Update API docs"
+        command: "ls -la 'API Docs/'"
+        
+      - name: "Check SISN documentation"
+        command: "ls -la 'SISN README/'"
+        
+  # Emergency Restart
+  emergency_restart:
+    name: "Emergency Restart"
+    description: "Quick restart for when things go wrong"
+    steps:
+      - name: "Kill all Node processes"
+        command: "pkill -f node"
+        
+      - name: "Kill port 3000 processes"
+        command: "lsof -ti:3000 | xargs kill -9 2>/dev/null || true"
+        
+      - name: "Clean cache"
+        command: "rm -rf .next node_modules/.cache"
+        
+      - name: "Reinstall dependencies"
+        command: "npm install"
+        
+      - name: "Restart dev server"
+        command: "npm run dev &"
+        
+      - name: "Wait and verify"
+        command: "sleep 10 && curl -f http://localhost:3000 && echo 'Server restarted successfully'"
+        
+# Workflow Templates
+templates:
+  
+  # New Feature Development
+  new_feature:
+    name: "New Feature Development Template"
+    description: "Template for developing new features"
+    variables:
+      - name: "FEATURE_NAME"
+        description: "Name of the new feature"
+        required: true
+        
+      - name: "COMPONENT_TYPE"
+        description: "Type of component (page, component, api)"
+        options: ["page", "component", "api"]
+        
+    steps:
+      - name: "Create feature branch"
+        command: "git checkout -b feature/${FEATURE_NAME}"
+        
+      - name: "Create component structure"
+        command: "mkdir -p components/${FEATURE_NAME}"
+        condition: "COMPONENT_TYPE == 'component'"
+        
+      - name: "Create API structure"
+        command: "mkdir -p app/api/${FEATURE_NAME}"
+        condition: "COMPONENT_TYPE == 'api'"
+        
+      - name: "Create test files"
+        command: "touch test-${FEATURE_NAME}.js"
+        
+  # Bug Fix Workflow
+  bug_fix:
+    name: "Bug Fix Workflow Template"
+    description: "Template for fixing bugs"
+    variables:
+      - name: "BUG_ID"
+        description: "Bug identifier or issue number"
+        required: true
+        
+    steps:
+      - name: "Create fix branch"
+        command: "git checkout -b fix/${BUG_ID}"
+        
+      - name: "Run diagnostics"
+        workflow: "build_test"
+        
+      - name: "Create debug script"
+        command: "touch debug-${BUG_ID}.js"
+        
+# Scheduled Workflows
+scheduled:
+  
+  # Daily health check
+  daily_health:
+    name: "Daily Health Check"
+    schedule: "0 9 * * *"  # 9 AM daily
+    workflow: "build_test"
+    
+  # Weekly cleanup
+  weekly_cleanup:
+    name: "Weekly Cleanup"
+    schedule: "0 2 * * 0"  # 2 AM Sunday
+    steps:
+      - name: "Clean build artifacts"
+        command: "rm -rf .next node_modules/.cache"
+        
+      - name: "Update dependencies"
+        command: "npm update"
+        
+      - name: "Security audit"
+        command: "npm audit fix"
+        
+# Environment-specific workflows
+environments:
+  
+  development:
+    workflows: ["daily_dev", "lc_development", "matrix_testing"]
+    
+  staging:
+    workflows: ["build_test", "deploy_prep", "performance_analysis"]
+    
+  production:
+    workflows: ["deploy_prep", "code_quality", "performance_analysis"]
+    
+# Quick Actions (for Warp integration)
+quick_actions:
+  
+  # One-click actions
+  - name: "dev"
+    workflow: "daily_dev"
+    icon: "🚀"
+    
+  - name: "test"
+    workflow: "build_test"
+    icon: "🧪"
+    
+  - name: "lc"
+    workflow: "lc_development"
+    icon: "📋"
+    
+  - name: "restart"
+    workflow: "emergency_restart"
+    icon: "🔄"
+    
+  - name: "deploy"
+    workflow: "deploy_prep"
+    icon: "🚀"

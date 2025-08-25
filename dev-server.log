@@ -1,0 +1,196 @@
+
+> my-v0-project@0.1.0 dev
+> next dev --port 3001
+
+   ▲ Next.js 15.2.4
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.65:3001
+
+ ✓ Starting...
+ ✓ Ready in 3.6s
+ ○ Compiling / ...
+ ✓ Compiled / in 3.8s (3204 modules)
+ GET / 200 in 4721ms
+ ✓ Compiled in 1007ms (1584 modules)
+ GET / 200 in 63ms
+ ✓ Compiled in 704ms (3204 modules)
+ GET / 200 in 86ms
+ ✓ Compiled in 377ms (3204 modules)
+ GET / 200 in 69ms
+ ✓ Compiled in 393ms (3204 modules)
+ GET / 200 in 70ms
+ GET / 200 in 364ms
+ ✓ Compiled /_not-found in 385ms (3194 modules)
+ GET /api/stellar/getOTCAccount/clix100 404 in 476ms
+ ○ Compiling /api/stellar/balances/[userId] ...
+ ✓ Compiled /api/stellar/balances/[userId] in 649ms (3487 modules)
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 3022ms
+ ○ Compiling /api/stellar/orders/[userId] ...
+ ✓ Compiled /api/stellar/orders/[userId] in 527ms (3489 modules)
+ GET /api/stellar/getOTCAccount/clix100 404 in 490ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 118ms
+ GET /api/stellar/orders/159648353303?status=open 404 in 1169ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 761ms
+ GET /api/stellar/orders/159648353303?status=open 404 in 6ms
+ ✓ Compiled /api/stellar/getTokens in 211ms (3491 modules)
+ GET /api/stellar/getTokens 200 in 282ms
+ GET /api/stellar/getTokens 200 in 6ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 70ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 20ms
+ ✓ Compiled in 1263ms (3205 modules)
+ GET / 200 in 239ms
+ ✓ Compiled in 279ms (3205 modules)
+ GET / 200 in 108ms
+ ✓ Compiled in 440ms (3205 modules)
+ GET / 200 in 67ms
+ ✓ Compiled /_not-found in 254ms (3195 modules)
+ GET /api/stellar/getOTCAccount/clix100 404 in 349ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 19ms
+ GET / 200 in 335ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 40ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 44ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 45ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 24ms
+ ✓ Compiled /api/stellar/balances/[userId] in 457ms (1913 modules)
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2383ms
+ ○ Compiling /api/stellar/orders/[userId] ...
+ ✓ Compiled /api/stellar/orders/[userId] in 616ms (3489 modules)
+ GET /api/stellar/orders/159648353303?status=open 404 in 824ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 665ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 123ms
+ GET / 200 in 294ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 88ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 87ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 87ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 87ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 1942ms
+ GET /api/stellar/orders/159648353303?status=open 404 in 12ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 53ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 27ms
+ GET /api/stellar/getOTCAccount/clix100 404 in 37ms
+ ○ Compiling /api/lc/list ...
+ ✓ Compiled /api/lc/list in 608ms (3485 modules)
+ GET /api/lc/list?page=1&limit=20 200 in 676ms
+ GET /api/lc/list?page=1&limit=20 200 in 5ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 3267ms
+ ✓ Compiled /api/stellar/orders/[userId] in 124ms (1916 modules)
+ GET /api/stellar/orders/159648353303?status=open 404 in 244ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 548ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 533ms
+ ✓ Compiled /api/stellar/getTokens in 236ms (1918 modules)
+ GET /api/stellar/getTokens 200 in 306ms
+ GET /api/stellar/getTokens 200 in 7ms
+ ✓ Compiled in 780ms (3503 modules)
+ GET / 200 in 147ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2698ms
+ GET /api/stellar/orders/159648353303?status=open 404 in 10ms
+ ✓ Compiled in 341ms (3503 modules)
+ GET / 200 in 116ms
+ GET / 200 in 398ms
+ GET /api/lc/list?page=1&limit=20 200 in 10ms
+ GET /api/lc/list?page=1&limit=20 200 in 9ms
+ ✓ Compiled /_not-found in 388ms (3213 modules)
+ GET /api/stellar/balances 404 in 509ms
+ GET /api/stellar/balances 404 in 22ms
+ GET /api/lc/list?page=1&limit=20 200 in 10ms
+ GET /api/lc/list?page=1&limit=20 200 in 5ms
+ ✓ Compiled /api/stellar/balances/[userId] in 313ms (1914 modules)
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2478ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 547ms
+ GET / 200 in 297ms
+ ✓ Compiled in 841ms (3205 modules)
+ GET / 200 in 271ms
+ ✓ Compiled in 274ms (3205 modules)
+ GET / 200 in 90ms
+ ✓ Compiled in 480ms (3205 modules)
+ GET / 200 in 67ms
+ GET / 200 in 325ms
+ ✓ Compiled /api/stellar/balances/[userId] in 155ms (1912 modules)
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2183ms
+ ✓ Compiled /api/stellar/orders/[userId] in 299ms (1914 modules)
+ GET /api/stellar/orders/159648353303?status=open 404 in 399ms
+ ✓ Compiled /api/lc/list in 128ms (1916 modules)
+ GET /api/lc/list?page=1&limit=20 200 in 155ms
+ GET /api/lc/list?page=1&limit=20 200 in 5ms
+ ✓ Compiled /api/stellar/getTokens in 208ms (1918 modules)
+ GET /api/stellar/getTokens 200 in 271ms
+ GET /api/stellar/getTokens 200 in 5ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2350ms
+ GET /api/stellar/orders/159648353303?status=open 404 in 11ms
+ ✓ Compiled in 1301ms (3205 modules)
+ GET / 200 in 313ms
+ GET / 200 in 335ms
+ ✓ Compiled /api/stellar/balances/[userId] in 189ms (1912 modules)
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2291ms
+ ✓ Compiled /api/stellar/orders/[userId] in 131ms (1914 modules)
+ GET /api/stellar/orders/159648353303?status=open 404 in 198ms
+ ✓ Compiled in 648ms (3205 modules)
+ GET / 200 in 304ms
+ ✓ Compiled in 322ms (3205 modules)
+ GET / 200 in 70ms
+ GET / 200 in 407ms
+ ✓ Compiled in 765ms (3205 modules)
+ GET / 200 in 104ms
+ ✓ Compiled in 324ms (3205 modules)
+ GET / 200 in 69ms
+ GET / 200 in 208ms
+ ✓ Compiled in 780ms (3205 modules)
+ GET / 200 in 101ms
+ GET / 200 in 225ms
+ ✓ Compiled in 699ms (3205 modules)
+ GET / 200 in 104ms
+ ✓ Compiled in 315ms (3205 modules)
+ GET / 200 in 62ms
+ ✓ Compiled in 394ms (3205 modules)
+ GET / 200 in 64ms
+ GET / 200 in 345ms
+ ✓ Compiled in 625ms (3205 modules)
+ GET / 200 in 128ms
+ ✓ Compiled in 297ms (3205 modules)
+ GET / 200 in 66ms
+ GET / 200 in 257ms
+ ✓ Compiled in 787ms (3205 modules)
+ GET / 200 in 114ms
+ ✓ Compiled in 484ms (3205 modules)
+ GET / 200 in 92ms
+ GET / 200 in 461ms
+ ○ Compiling /api/lc/list ...
+ ✓ Compiled /api/lc/list in 521ms (1638 modules)
+ GET /api/lc/list?page=1&limit=20 200 in 636ms
+ GET /api/lc/list?page=1&limit=20 200 in 8ms
+ ✓ Compiled /_not-found in 484ms (3213 modules)
+ GET /api/stellar/balances 404 in 693ms
+ GET /api/stellar/balances 404 in 71ms
+ GET / 200 in 294ms
+ GET /api/lc/list?page=1&limit=20 200 in 59ms
+ GET /api/lc/list?page=1&limit=20 200 in 5ms
+ GET /api/stellar/balances 404 in 40ms
+ GET /api/stellar/balances 404 in 23ms
+ GET /api/lc/list?page=1&limit=20 200 in 30ms
+ GET /api/lc/list?page=1&limit=20 200 in 7ms

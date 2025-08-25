@@ -1,0 +1,2479 @@
+
+> my-v0-project@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.2.4
+   - Local:        http://localhost:3000
+   - Network:      http://10.108.157.251:3000
+
+ ✓ Starting...
+ ✓ Ready in 9.9s
+ ○ Compiling / ...
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ HEAD / 200 in 3698ms
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 111ms
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 123ms
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 92ms
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 95ms
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 62ms
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 78ms
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 16ms
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 18ms
+ HEAD / 200 in 257ms
+ ⚠ ./components/wallet-connection-dialog.tsx
+Attempted import error: 'postUnauthenticated' is not exported from '@/lib/service' (imported as 'postUnauthenticated').
+
+Import trace for requested module:
+./components/wallet-connection-dialog.tsx
+./components/wallet-drawer.tsx
+
+./hooks/use-wallet.ts
+Attempted import error: 'postUnauthenticated' is not exported from '@/lib/service' (imported as 'postUnauthenticated').
+
+Import trace for requested module:
+./hooks/use-wallet.ts
+./components/wallet-drawer.tsx
+
+./components/wallet-connection-dialog.tsx
+Attempted import error: 'postUnauthenticated' is not exported from '@/lib/service' (imported as 'postUnauthenticated').
+
+Import trace for requested module:
+./components/wallet-connection-dialog.tsx
+./components/wallet-drawer.tsx
+
+./hooks/use-wallet.ts
+Attempted import error: 'postUnauthenticated' is not exported from '@/lib/service' (imported as 'postUnauthenticated').
+
+Import trace for requested module:
+./hooks/use-wallet.ts
+./components/wallet-drawer.tsx
+
+./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 106ms
+ ⚠ ./components/wallet-connection-dialog.tsx
+Attempted import error: 'postUnauthenticated' is not exported from '@/lib/service' (imported as 'postUnauthenticated').
+
+Import trace for requested module:
+./components/wallet-connection-dialog.tsx
+./components/wallet-drawer.tsx
+
+./hooks/use-wallet.ts
+Attempted import error: 'postUnauthenticated' is not exported from '@/lib/service' (imported as 'postUnauthenticated').
+
+Import trace for requested module:
+./hooks/use-wallet.ts
+./components/wallet-drawer.tsx
+
+./components/wallet-connection-dialog.tsx
+Attempted import error: 'postUnauthenticated' is not exported from '@/lib/service' (imported as 'postUnauthenticated').
+
+Import trace for requested module:
+./components/wallet-connection-dialog.tsx
+./components/wallet-drawer.tsx
+
+./hooks/use-wallet.ts
+Attempted import error: 'postUnauthenticated' is not exported from '@/lib/service' (imported as 'postUnauthenticated').
+
+Import trace for requested module:
+./hooks/use-wallet.ts
+./components/wallet-drawer.tsx
+
+./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 107ms
+ ⚠ ./hooks/use-wallet.ts
+Attempted import error: 'postUnauthenticated' is not exported from '@/lib/service' (imported as 'postUnauthenticated').
+
+Import trace for requested module:
+./hooks/use-wallet.ts
+./components/wallet-drawer.tsx
+
+./hooks/use-wallet.ts
+Attempted import error: 'postUnauthenticated' is not exported from '@/lib/service' (imported as 'postUnauthenticated').
+
+Import trace for requested module:
+./hooks/use-wallet.ts
+./components/wallet-drawer.tsx
+
+./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 114ms
+ ⚠ ./hooks/use-wallet.ts
+Attempted import error: 'postUnauthenticated' is not exported from '@/lib/service' (imported as 'postUnauthenticated').
+
+Import trace for requested module:
+./hooks/use-wallet.ts
+./components/wallet-drawer.tsx
+
+./hooks/use-wallet.ts
+Attempted import error: 'postUnauthenticated' is not exported from '@/lib/service' (imported as 'postUnauthenticated').
+
+Import trace for requested module:
+./hooks/use-wallet.ts
+./components/wallet-drawer.tsx
+
+./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 81ms
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 64ms
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 200 in 77ms
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ GET / 404 in 1481ms
+ GET /_next/static/css/app/layout.css?v=1755194460488 404 in 30ms
+ GET /_next/static/chunks/main-app.js?v=1755194460488 404 in 75ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 75ms
+ GET /_next/static/chunks/app/layout.js 404 in 75ms
+ GET / 200 in 272ms
+ GET /_next/static/css/app/layout.css?v=1755194463860 404 in 30ms
+ GET /_next/static/chunks/main-app.js?v=1755194463860 404 in 95ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 94ms
+ GET /_next/static/chunks/app/page.js 404 in 94ms
+ GET /_next/static/chunks/app/layout.js 404 in 95ms
+ GET / 200 in 59ms
+ GET /_next/static/css/app/layout.css?v=1755194492262 404 in 53ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 107ms
+ GET /_next/static/chunks/app/page.js 404 in 106ms
+ GET /_next/static/chunks/main-app.js?v=1755194492262 404 in 108ms
+ GET /_next/static/chunks/app/layout.js 404 in 108ms
+ GET / 200 in 95ms
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+ ⚠ ./node_modules/require-addon/lib/runtime/bare.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/bare.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/default.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/default.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/require-addon/lib/runtime/node.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/require-addon/lib/runtime/node.js
+./node_modules/require-addon/index.js
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+
+./node_modules/sodium-native/index.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+./node_modules/sodium-native/index.js
+./node_modules/@stellar/stellar-base/lib/signing.js
+./node_modules/@stellar/stellar-base/lib/index.js
+./node_modules/@stellar/stellar-sdk/lib/index.js
+./lib/stellar-trading.ts
+./components/stellar-trade-panel.tsx
+./components/modern-chat-view.tsx
+./app/page.tsx
+[?25h

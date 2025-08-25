@@ -1,0 +1,159 @@
+# Warp Configuration for CLIX Trade Finance Platform
+# Optimized for Next.js development with Matrix, Stellar blockchain integration
+
+project:
+  name: "CLIX Trading Platform"
+  type: "nextjs"
+  description: "Blockchain-based trade finance platform with Letter of Credit digitization"
+  version: "0.1.0"
+  
+settings:
+  # Development server configuration
+  dev_server:
+    port: 3000
+    host: "localhost"
+    auto_start: true
+    open_browser: false  # Keep in background per user rule
+    
+  # Build and deployment settings
+  build:
+    output_dir: ".next"
+    static_dir: "public"
+    cache_dir: ".next/cache"
+    
+  # Project structure awareness
+  directories:
+    source: "app"
+    components: "components"
+    lib: "lib"
+    hooks: "hooks"
+    styles: "styles"
+    docs: "docs"
+    
+  # File patterns for better navigation
+  file_patterns:
+    pages: "app/**/(page|layout|loading|error|not-found).tsx"
+    components: "components/**/*.tsx"
+    api: "app/api/**/route.ts"
+    types: "lib/**/*.ts"
+    hooks: "hooks/**/*.ts"
+    
+  # Technology stack awareness
+  tech_stack:
+    - "Next.js 15"
+    - "React 19"
+    - "TypeScript"
+    - "Tailwind CSS"
+    - "Matrix Protocol"
+    - "Stellar SDK"
+    - "Radix UI"
+    - "shadcn/ui"
+    
+  # Environment variables template
+  env_template:
+    - "NEXT_PUBLIC_MATRIX_HOMESERVER"
+    - "NEXT_PUBLIC_STELLAR_NETWORK"
+    - "NEXT_PUBLIC_CLIC_API_URL"
+    - "DATABASE_URL"
+    - "MATRIX_ACCESS_TOKEN"
+    
+  # Common tasks and shortcuts
+  quick_actions:
+    - name: "dev"
+      command: "npm run dev"
+      description: "Start development server on port 3000"
+      
+    - name: "build"
+      command: "npm run build"
+      description: "Build for production"
+      
+    - name: "start"
+      command: "npm start"
+      description: "Start production server"
+      
+    - name: "lint"
+      command: "npm run lint"
+      description: "Run ESLint checks"
+      
+    - name: "test-auth"
+      command: "node test-auth-fix.js"
+      description: "Test authentication system"
+      
+    - name: "test-wallet"
+      command: "node test-wallet-connection.js"
+      description: "Test wallet connection"
+      
+    - name: "check-endpoints"
+      command: "bash check-endpoints.sh"
+      description: "Check API endpoints status"
+      
+  # LC (Letter of Credit) specific shortcuts  
+  lc_actions:
+    - name: "lc-dashboard"
+      url: "http://localhost:3000"
+      description: "Open LC Dashboard in browser"
+      
+    - name: "api-docs"
+      path: "API Docs/"
+      description: "View API documentation"
+      
+    - name: "sisn-docs"
+      path: "SISN README/"
+      description: "View SISN architecture documents"
+      
+# Warp-specific optimizations
+warp:
+  # Terminal enhancements
+  terminal:
+    # Enable auto-completion for project files
+    autocomplete: true
+    # Show git status in prompt
+    git_integration: true
+    # Enable syntax highlighting
+    syntax_highlighting: true
+    
+  # Performance settings
+  performance:
+    # Enable file watching for hot reload
+    file_watching: true
+    # Cache frequently accessed files
+    file_cache: true
+    # Optimize for large codebases
+    large_project_mode: true
+    
+  # AI assistant configuration
+  ai_assistant:
+    # Context awareness for this project
+    project_context: true
+    # Enable code suggestions
+    code_completion: true
+    # Understand project structure
+    structure_awareness: true
+    
+# Custom aliases for this project
+aliases:
+  ll: "ls -la"
+  dev: "npm run dev"
+  build: "npm run build"
+  start: "npm start"
+  test: "npm test"
+  lint: "npm run lint"
+  logs: "tail -f *.log"
+  server-status: "lsof -i :3000"
+  kill-server: "lsof -ti:3000 | xargs kill -9"
+  git-status: "git status --short"
+  git-log: "git log --oneline -10"
+  clean-cache: "rm -rf .next node_modules/.cache"
+  install: "npm install"
+  update: "npm update"
+  
+# Project-specific git shortcuts
+git_shortcuts:
+  save: "git add . && git commit -m"
+  push: "git push origin main"
+  pull: "git pull origin main"
+  branch: "git checkout -b"
+  merge: "git merge"
+  status: "git status"
+  diff: "git diff"
+  log: "git log --oneline -10"

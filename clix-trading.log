@@ -1,0 +1,44 @@
+
+> my-v0-project@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.2.4
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.68:3001
+
+ ✓ Starting...
+ ✓ Ready in 4.1s
+ ○ Compiling / ...
+ ✓ Compiled / in 4.7s (3186 modules)
+ GET / 200 in 5604ms
+ GET / 200 in 3044ms
+ ✓ Compiled in 1184ms (1575 modules)
+ GET / 200 in 85ms
+ ○ Compiling /api/stellar/balances/[userId] ...
+ ✓ Compiled /api/stellar/balances/[userId] in 976ms (3465 modules)
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 3625ms
+ ✓ Compiled /api/stellar/orders/[userId] in 249ms (3467 modules)
+ GET /api/stellar/orders/159648353303?status=open 404 in 848ms
+ ✓ Compiled /api/lc/list in 214ms (3469 modules)
+ GET /api/lc/list?page=1&limit=20 200 in 245ms
+ GET /api/lc/list?page=1&limit=20 200 in 5ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 2040ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 497ms
+No wallet verification method succeeded for user: 159648353303
+No verified wallet found for user: 159648353303
+ GET /api/stellar/balances/159648353303 404 in 1713ms
+ GET /api/stellar/orders/159648353303?status=open 404 in 14ms
+ GET /api/lc/list?page=1&limit=20 200 in 8ms
+ GET /api/lc/list?page=1&limit=20 200 in 7ms
+ ✓ Compiled in 1377ms (3187 modules)
+ GET / 200 in 269ms
+ ✓ Compiled in 338ms (3187 modules)
+ GET / 200 in 101ms
+ GET / 200 in 432ms
+[?25h

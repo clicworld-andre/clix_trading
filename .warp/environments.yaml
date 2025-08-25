@@ -1,0 +1,333 @@
+# CLIX Trading Platform - Environment Configurations
+# Environment-specific settings for development, staging, and production
+
+# Development Environment
+development:
+  name: "Development"
+  description: "Local development environment"
+  
+  server:
+    port: 3000
+    host: "localhost"
+    protocol: "http"
+    auto_reload: true
+    debug: true
+    
+  database:
+    type: "sqlite"
+    file: "dev.db"
+    auto_migrate: true
+    seed_data: true
+    
+  api:
+    base_url: "http://localhost:3000/api"
+    timeout: 30000
+    rate_limit: false
+    cors_enabled: true
+    
+  blockchain:
+    stellar:
+      network: "testnet"
+      horizon_url: "https://horizon-testnet.stellar.org"
+      soroban_url: "https://soroban-testnet.stellar.org"
+      
+  matrix:
+    homeserver: "https://matrix.org"
+    test_mode: true
+    encryption: true
+    
+  features:
+    lc_creation: true
+    wallet_integration: true
+    matrix_chat: true
+    stellar_trading: true
+    admin_panel: true
+    debug_tools: true
+    
+  logging:
+    level: "debug"
+    console: true
+    file: "dev.log"
+    
+  security:
+    jwt_secret: "dev-secret-key"
+    session_timeout: 3600
+    rate_limiting: false
+    
+  build:
+    source_maps: true
+    minify: false
+    optimize: false
+    bundle_analyzer: true
+    
+  commands:
+    start: "npm run dev"
+    build: "npm run build"
+    test: "npm run lint && node test-auth-fix.js"
+    
+# Staging Environment
+staging:
+  name: "Staging"
+  description: "Pre-production testing environment"
+  
+  server:
+    port: 3001
+    host: "0.0.0.0"
+    protocol: "https"
+    auto_reload: false
+    debug: false
+    
+  database:
+    type: "postgresql"
+    url: "${STAGING_DATABASE_URL}"
+    auto_migrate: true
+    seed_data: false
+    
+  api:
+    base_url: "https://staging.clix.world/api"
+    timeout: 15000
+    rate_limit: true
+    cors_enabled: false
+    
+  blockchain:
+    stellar:
+      network: "testnet"
+      horizon_url: "https://horizon-testnet.stellar.org"
+      soroban_url: "https://soroban-testnet.stellar.org"
+      
+  matrix:
+    homeserver: "https://staging-matrix.clix.world"
+    test_mode: false
+    encryption: true
+    
+  features:
+    lc_creation: true
+    wallet_integration: true
+    matrix_chat: true
+    stellar_trading: true
+    admin_panel: true
+    debug_tools: false
+    
+  logging:
+    level: "info"
+    console: false
+    file: "staging.log"
+    
+  security:
+    jwt_secret: "${STAGING_JWT_SECRET}"
+    session_timeout: 1800
+    rate_limiting: true
+    
+  build:
+    source_maps: false
+    minify: true
+    optimize: true
+    bundle_analyzer: false
+    
+  commands:
+    start: "npm run build && npm start"
+    build: "npm run build"
+    test: "npm run lint && npm run build"
+    
+# Production Environment
+production:
+  name: "Production"
+  description: "Live production environment"
+  
+  server:
+    port: 3000
+    host: "0.0.0.0"
+    protocol: "https"
+    auto_reload: false
+    debug: false
+    
+  database:
+    type: "postgresql"
+    url: "${PRODUCTION_DATABASE_URL}"
+    auto_migrate: false
+    seed_data: false
+    
+  api:
+    base_url: "https://trade.clix.world/api"
+    timeout: 10000
+    rate_limit: true
+    cors_enabled: false
+    
+  blockchain:
+    stellar:
+      network: "mainnet"
+      horizon_url: "https://horizon.stellar.org"
+      soroban_url: "https://soroban-mainnet.stellar.org"
+      
+  matrix:
+    homeserver: "https://matrix.clix.world"
+    test_mode: false
+    encryption: true
+    
+  features:
+    lc_creation: true
+    wallet_integration: true
+    matrix_chat: true
+    stellar_trading: true
+    admin_panel: false
+    debug_tools: false
+    
+  logging:
+    level: "error"
+    console: false
+    file: "production.log"
+    
+  security:
+    jwt_secret: "${PRODUCTION_JWT_SECRET}"
+    session_timeout: 900
+    rate_limiting: true
+    
+  build:
+    source_maps: false
+    minify: true
+    optimize: true
+    bundle_analyzer: false
+    
+  commands:
+    start: "npm start"
+    build: "npm run build"
+    test: "npm run lint"
+    
+# Environment-specific aliases
+aliases:
+  development:
+    dev: "npm run dev &"
+    logs: "tail -f dev.log"
+    restart: "lsof -ti:3000 | xargs kill -9 && npm run dev &"
+    db: "sqlite3 dev.db"
+    test-all: "node test-auth-fix.js && node test-wallet-connection.js"
+    
+  staging:
+    deploy: "npm run build && pm2 restart clix-staging"
+    logs: "pm2 logs clix-staging"
+    status: "pm2 status clix-staging"
+    db: "psql ${STAGING_DATABASE_URL}"
+    
+  production:
+    deploy: "npm run build && pm2 restart clix-production"
+    logs: "pm2 logs clix-production"
+    status: "pm2 status clix-production"
+    monitor: "pm2 monit"
+    
+# Environment variables template
+env_variables:
+  development:
+    - NODE_ENV: "development"
+    - NEXT_PUBLIC_ENV: "development"
+    - NEXT_PUBLIC_API_URL: "http://localhost:3000/api"
+    - NEXT_PUBLIC_MATRIX_HOMESERVER: "https://matrix.org"
+    - NEXT_PUBLIC_STELLAR_NETWORK: "testnet"
+    - DEBUG: "true"
+    
+  staging:
+    - NODE_ENV: "staging"
+    - NEXT_PUBLIC_ENV: "staging"
+    - NEXT_PUBLIC_API_URL: "https://staging.clix.world/api"
+    - NEXT_PUBLIC_MATRIX_HOMESERVER: "https://staging-matrix.clix.world"
+    - NEXT_PUBLIC_STELLAR_NETWORK: "testnet"
+    - DATABASE_URL: "${STAGING_DATABASE_URL}"
+    - JWT_SECRET: "${STAGING_JWT_SECRET}"
+    
+  production:
+    - NODE_ENV: "production"
+    - NEXT_PUBLIC_ENV: "production"
+    - NEXT_PUBLIC_API_URL: "https://trade.clix.world/api"
+    - NEXT_PUBLIC_MATRIX_HOMESERVER: "https://matrix.clix.world"
+    - NEXT_PUBLIC_STELLAR_NETWORK: "mainnet"
+    - DATABASE_URL: "${PRODUCTION_DATABASE_URL}"
+    - JWT_SECRET: "${PRODUCTION_JWT_SECRET}"
+    
+# Deployment configurations
+deployment:
+  development:
+    type: "local"
+    auto_deploy: false
+    
+  staging:
+    type: "docker"
+    registry: "gcr.io/clix-staging"
+    auto_deploy: true
+    branch: "develop"
+    
+  production:
+    type: "kubernetes"
+    cluster: "clix-production"
+    auto_deploy: false
+    branch: "main"
+    
+# Health checks
+health_checks:
+  development:
+    enabled: true
+    endpoints:
+      - "http://localhost:3000/api/health"
+      - "http://localhost:3000/api/lc/list"
+    interval: 30
+    
+  staging:
+    enabled: true
+    endpoints:
+      - "https://staging.clix.world/api/health"
+      - "https://staging.clix.world/api/lc/list"
+    interval: 60
+    
+  production:
+    enabled: true
+    endpoints:
+      - "https://trade.clix.world/api/health"
+      - "https://trade.clix.world/api/lc/list"
+    interval: 30
+    
+# Monitoring
+monitoring:
+  development:
+    enabled: false
+    
+  staging:
+    enabled: true
+    tools: ["pm2", "winston"]
+    alerts: false
+    
+  production:
+    enabled: true
+    tools: ["pm2", "winston", "sentry"]
+    alerts: true
+    
+# Security settings
+security:
+  development:
+    https: false
+    cors: true
+    helmet: false
+    
+  staging:
+    https: true
+    cors: false
+    helmet: true
+    
+  production:
+    https: true
+    cors: false
+    helmet: true
+    
+# Performance settings
+performance:
+  development:
+    caching: false
+    compression: false
+    cdn: false
+    
+  staging:
+    caching: true
+    compression: true
+    cdn: false
+    
+  production:
+    caching: true
+    compression: true
+    cdn: true
